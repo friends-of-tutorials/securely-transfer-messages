@@ -35,9 +35,9 @@ This is a tutorial to securely transfer messages from a to b with various coding
 
 ## 2. Implementations
 
-### 2.0 Public and private key
+### 2.0 Building public and private key
 
-#### Building private and public key
+#### Bash example
 
 Private key: private.pem
 
