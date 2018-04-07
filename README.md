@@ -51,6 +51,10 @@ user$ openssl rsa -pubout -in private.pem -out public.pem
 ##### Example public.pem
 
 ```
+user$ cat public.pem
+```
+
+```
 -----BEGIN PUBLIC KEY-----
 MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoQcfLo00xicP5oJ8yIcl
 gtVNZBka2ppKfU7MyRJbNpQYIlbJBmiFYa2tNitYGF0TaMA3k2Z5omnBat2MEE5U
@@ -63,6 +67,10 @@ MQIDAQAB
 ```
 
 ##### Example private.pem
+
+```
+user$ cat private.pem
+```
 
 ```
 -----BEGIN PRIVATE KEY-----
