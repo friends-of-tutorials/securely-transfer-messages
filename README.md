@@ -4,7 +4,8 @@ This is a tutorial to securely transfer messages from a to b with various coding
 
 ## Contents
 
-* [Symmetric cryptography](#user-content-symmetric-cryptography)
+* [Preliminary considerations](#user-content-preliminary-considerations)
+** [Symmetric cryptography](#user-content-symmetric-cryptography)
 
 ## Preliminary considerations
 
