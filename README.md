@@ -9,6 +9,9 @@ This is a tutorial to securely transfer messages from a to b with various coding
   * [Asymmetric cryptography](#user-content-asymmetric-cryptography)
   * [Hybrid cryptography](#user-content-hybrid-cryptography)
 * [Implementations](#user-content-implementations)
+  * [Bash](#user-content-bash)
+  * [Javascript](#user-content-javascript)
+  * [PHP](#user-content-php)
 
 ## Preliminary considerations
 
