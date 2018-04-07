@@ -2,7 +2,13 @@
 
 This is a tutorial to securely transfer messages from a to b with various coding languages.
 
-## preliminary considerations
+## Preliminary considerations
+
+### Symmetric cryptography
+
+### Asymmetrical cryptography
+
+### Hybrid cryptosystem
 
 ## implementations
 
