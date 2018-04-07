@@ -2,9 +2,9 @@
 
 This is a tutorial to securely transfer messages from a to b with various coding languages.
 
-## Contents
+## 0. Contents
 
-* [Preliminary considerations](#user-content-preliminary-considerations)
+* [1. Preliminary considerations](#user-content-preliminary-considerations)
   * [Symmetric cryptography](#user-content-symmetric-cryptography)
   * [Asymmetric cryptography](#user-content-asymmetric-cryptography)
   * [Hybrid cryptography](#user-content-hybrid-cryptography)
@@ -13,42 +13,42 @@ This is a tutorial to securely transfer messages from a to b with various coding
   * [Javascript](#user-content-javascript)
   * [PHP](#user-content-php)
 
-## Preliminary considerations
+## 1. Preliminary considerations
 
-### Symmetric cryptography
+### 1.1 Symmetric cryptography
 
-#### Advantages
+#### 1.1.1 Advantages
 
-#### Disadvantage
+#### 1.1.2 Disadvantage
 
-### Asymmetrical cryptography
+### 1.2 Asymmetrical cryptography
 
-#### Advantages
+#### 1.2.1 Advantages
 
-#### Disadvantage
+#### 1.2.2 Disadvantage
 
-### Hybrid cryptography
+### 1.3 Hybrid cryptography
 
-#### Advantages
+#### 1.3.1 Advantages
 
-#### Disadvantage
+#### 1.3.2 Disadvantage
 
-## Implementations
+## 2. Implementations
 
-### Bash
+### 2.1 Bash
 
-#### Encryption
+#### 2.1.1 Encryption
 
-#### Decryption
+#### 2.1.2 Decryption
 
-### Javascript
+### 2.2 Javascript
 
-#### Encryption
+#### 2.2.1 Encryption
 
-#### Decryption
+#### 2.2.2 Decryption
 
-### PHP
+### 2.3 PHP
 
-#### Encryption
+#### 2.3.1 Encryption
 
-#### Decryption
+#### 2.3.2 Decryption
