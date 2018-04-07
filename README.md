@@ -6,6 +6,9 @@ This is a tutorial to securely transfer messages from a to b with various coding
 
 * [Preliminary considerations](#user-content-preliminary-considerations)
   * [Symmetric cryptography](#user-content-symmetric-cryptography)
+  * [Asymmetric cryptography](#user-content-asymmetric-cryptography)
+  * [Hybrid cryptography](#user-content-hybrid-cryptography)
+* [Implementations](#user-content-implementations)
 
 ## Preliminary considerations
 
@@ -21,16 +24,16 @@ This is a tutorial to securely transfer messages from a to b with various coding
 
 #### Disadvantage
 
-### Hybrid cryptosystem
+### Hybrid cryptography
 
 #### Advantages
 
 #### Disadvantage
 
-## implementations
+## Implementations
 
-### bash
+### Bash
 
-### javascript
+### Javascript
 
-### php 
+### PHP 
