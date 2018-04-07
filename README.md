@@ -37,6 +37,18 @@ This is a tutorial to securely transfer messages from a to b with various coding
 
 ### Bash
 
+#### Encryption
+
+#### Decryption
+
 ### Javascript
 
-### PHP 
+#### Encryption
+
+#### Decryption
+
+### PHP
+
+#### Encryption
+
+#### Decryption
