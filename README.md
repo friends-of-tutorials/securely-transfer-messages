@@ -35,6 +35,18 @@ This is a tutorial to securely transfer messages from a to b with various coding
 
 ## 2. Implementations
 
+### 2.0 Public and private key
+
+#### Building private and public key
+
+Private key: private.pem
+Public key: public.pem
+
+```
+user$ openssl genpkey -algorithm RSA -out private.pem -pkeyopt rsa_keygen_bits:2048
+user$ openssl rsa -pubout -in private.pem -out public.pem
+```
+
 ### 2.1 Bash
 
 #### 2.1.1 Encryption
