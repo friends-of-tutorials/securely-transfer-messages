@@ -13,7 +13,7 @@ This is a tutorial to securely transfer messages from system 1 to system 2 with 
     * [2.2.2 Asymmetric cryptography](#user-content-222-asymmetric-cryptography)
     * [2.2.3 Hybrid cryptography](#user-content-223-hybrid-cryptography)
 * [3. Implementations](#user-content-3-implementations)
-  * [3.0 Building public and private key](#user-content-30-building-public-and-private-key)
+  * [3.0 Building public and private key (asymmetric and hybrid cryptopgraphy)](#user-content-30-building-public-and-private-key)
   * [3.1 Bash](#user-content-31-bash)
   * [3.2 Javascript](#user-content-32-javascript)
   * [3.3 PHP](#user-content-33-php)
@@ -89,7 +89,7 @@ This is a tutorial to securely transfer messages from system 1 to system 2 with 
 
 ## 3. Implementations
 
-### 3.0 Building public and private key
+### 3.0 Building public and private key (asymmetric and hybrid cryptopgraphy)
 
 #### Bash example
 
