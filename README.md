@@ -20,6 +20,16 @@ This is a tutorial to securely transfer messages from system 1 to system 2 with 
   
 ## 1. Rules of information security
 
+### 1.1 confidentiality
+
+### 1.2 integrity
+
+### 1.3 availability
+
+### 1.4 authenticity
+
+* https://en.wikipedia.org/wiki/Message_authentication
+
 ## 2. Preliminary considerations
 
 ### 2.1 Unciphered message transfer
