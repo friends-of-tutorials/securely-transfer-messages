@@ -62,7 +62,7 @@ Authenticity refers to the characteristics of the authenticity, verifiability an
 
 ##### 2.1.1.2 Disadvantage
 
-* the message is catchable and breaks some rules of information security:
+* the message is catchable and modifiable. This transfer breaks some rules of information security:
   * confidentiality
   * integrity
   * authenticity
