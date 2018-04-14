@@ -32,17 +32,25 @@ This is a tutorial to securely transfer messages from a to b with various coding
 
 #### 1.2.1 Symmetric cryptography
 
+![No cryptography](/images/symmetric_cryptography.png)
+
 ##### 1.2.1.1 Advantages
 
 ##### 1.2.1.2 Disadvantage
 
 #### 1.2.2 Asymmetrical cryptography
 
+![No cryptography](/images/asymmetric_cryptography.png)
+
 ##### 1.2.2.1 Advantages
 
 ##### 1.2.2.2 Disadvantage
 
 #### 1.2.3 Hybrid cryptography
+
+![No cryptography](/images/hybrid_cryptography.png)
+
+![No cryptography](/images/hybrid_cryptography_2.png)
 
 ##### 1.2.3.1 Advantages
 
