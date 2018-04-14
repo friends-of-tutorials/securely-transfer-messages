@@ -58,7 +58,7 @@ Authenticity refers to the characteristics of the authenticity, verifiability an
 
 ##### 2.1.1.1 Advantages
 
-* easy to implement (just send the "readable message")
+* The transfer is easy to implement (just send the "readable message")
 
 ##### 2.1.1.2 Disadvantage
 
