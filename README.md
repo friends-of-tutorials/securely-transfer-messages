@@ -4,55 +4,57 @@ This is a tutorial to securely transfer messages from system 1 to system 2 with 
 
 ## 0. Contents
 
-* [1. Preliminary considerations](#user-content-1-preliminary-considerations)
-  * [1.1 Unciphered message transfer](#user-content-11-unciphered-message-transfer)
-    * [1.1.1 Unciphered transfer](#user-content-111-unciphered-transfer)
-  * [1.2 Ciphered message transfer](#user-content-12-ciphered-message-transfer)
-    * [1.2.1 Symmetric cryptography](#user-content-121-symmetric-cryptography)
-    * [1.2.2 Asymmetric cryptography](#user-content-122-asymmetric-cryptography)
-    * [1.2.3 Hybrid cryptography](#user-content-123-hybrid-cryptography)
-* [2. Implementations](#user-content-2-implementations)
-  * [2.1 Bash](#user-content-21-bash)
-  * [2.2 Javascript](#user-content-22-javascript)
-  * [2.3 PHP](#user-content-23-php)
+* [1. Preliminary considerations](#user-content-2-preliminary-considerations)
+  * [1.1 Unciphered message transfer](#user-content-21-unciphered-message-transfer)
+    * [1.1.1 Unciphered transfer](#user-content-211-unciphered-transfer)
+  * [1.2 Ciphered message transfer](#user-content-22-ciphered-message-transfer)
+    * [1.2.1 Symmetric cryptography](#user-content-221-symmetric-cryptography)
+    * [1.2.2 Asymmetric cryptography](#user-content-222-asymmetric-cryptography)
+    * [1.2.3 Hybrid cryptography](#user-content-223-hybrid-cryptography)
+* [2. Implementations](#user-content-3-implementations)
+  * [2.1 Bash](#user-content-31-bash)
+  * [2.2 Javascript](#user-content-32-javascript)
+  * [2.3 PHP](#user-content-33-php)
+  
+## 1. Rules of information security
 
-## 1. Preliminary considerations
+## 2. Preliminary considerations
 
-### 1.1 Unciphered message transfer
+### 2.1 Unciphered message transfer
 
-#### 1.1.1 Unciphered transfer
+#### 2.1.1 Unciphered transfer
 
 ![No cryptography](/images/no_cryptography.png)
 
-##### 1.1.1.1 Advantages
+##### 2.1.1.1 Advantages
 
 * easy to implement (just send the "readable message")
 
-##### 1.1.1.2 Disadvantage
+##### 2.1.1.2 Disadvantage
 
 * the message is catchable and breaks some rules of information security:
   * confidentiality
   * integrity
 
-### 1.2 Ciphered message transfer
+### 2.2 Ciphered message transfer
 
-#### 1.2.1 Symmetric cryptography
+#### 2.2.1 Symmetric cryptography
 
 ![No cryptography](/images/symmetric_cryptography.png)
 
-##### 1.2.1.1 Advantages
+##### 2.2.1.1 Advantages
 
-##### 1.2.1.2 Disadvantage
+##### 2.2.1.2 Disadvantage
 
-#### 1.2.2 Asymmetrical cryptography
+#### 2.2.2 Asymmetrical cryptography
 
 ![No cryptography](/images/asymmetric_cryptography.png)
 
-##### 1.2.2.1 Advantages
+##### 2.2.2.1 Advantages
 
-##### 1.2.2.2 Disadvantage
+##### 2.2.2.2 Disadvantage
 
-#### 1.2.3 Hybrid cryptography
+#### 2.2.3 Hybrid cryptography
 
 **Version 1 (The receiving system generates the symmetric key)**
 
@@ -62,13 +64,13 @@ This is a tutorial to securely transfer messages from system 1 to system 2 with 
 
 ![No cryptography](/images/hybrid_cryptography_2.png)
 
-##### 1.2.3.1 Advantages
+##### 2.2.3.1 Advantages
 
-##### 1.2.3.2 Disadvantage
+##### 2.2.3.2 Disadvantage
 
-## 2. Implementations
+## 3. Implementations
 
-### 2.0 Building public and private key
+### 3.0 Building public and private key
 
 #### Bash example
 
@@ -136,20 +138,20 @@ SyuRojfsMfUIFOQJ6NCW2w==
 -----END PRIVATE KEY-----
 ```
 
-### 2.1 Bash
+### 3.1 Bash
 
-#### 2.1.1 Encryption
+#### 3.1.1 Encryption
 
-#### 2.1.2 Decryption
+#### 3.1.2 Decryption
 
-### 2.2 Javascript
+### 3.2 Javascript
 
-#### 2.2.1 Encryption
+#### 3.2.1 Encryption
 
-#### 2.2.2 Decryption
+#### 3.2.2 Decryption
 
-### 2.3 PHP
+### 3.3 PHP
 
-#### 2.3.1 Encryption
+#### 3.3.1 Encryption
 
-#### 2.3.2 Decryption
+#### 3.3.2 Decryption
