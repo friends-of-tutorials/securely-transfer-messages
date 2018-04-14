@@ -1,6 +1,6 @@
 # A tutorial to securely transfer messages
 
-This is a tutorial to securely transfer messages from a to b with various coding languages.
+This is a tutorial to securely transfer messages from system 1 to system 2 with various coding languages.
 
 ## 0. Contents
 
