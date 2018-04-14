@@ -26,7 +26,13 @@ This is a tutorial to securely transfer messages from a to b with various coding
 
 ##### 1.1.1.1 Advantages
 
+* easy to implement (just send the "readable message"
+
 ##### 1.1.1.2 Disadvantage
+
+* the message is catchable and breaks some rules of information security:
+  * confidentiality
+  * integrity
 
 ### 1.2 Ciphered message transfer
 
