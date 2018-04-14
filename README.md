@@ -4,17 +4,17 @@ This is a tutorial to securely transfer messages from system 1 to system 2 with 
 
 ## 0. Contents
 
-* [1. Preliminary considerations](#user-content-2-preliminary-considerations)
-  * [1.1 Unciphered message transfer](#user-content-21-unciphered-message-transfer)
-    * [1.1.1 Unciphered transfer](#user-content-211-unciphered-transfer)
-  * [1.2 Ciphered message transfer](#user-content-22-ciphered-message-transfer)
-    * [1.2.1 Symmetric cryptography](#user-content-221-symmetric-cryptography)
-    * [1.2.2 Asymmetric cryptography](#user-content-222-asymmetric-cryptography)
-    * [1.2.3 Hybrid cryptography](#user-content-223-hybrid-cryptography)
-* [2. Implementations](#user-content-3-implementations)
-  * [2.1 Bash](#user-content-31-bash)
-  * [2.2 Javascript](#user-content-32-javascript)
-  * [2.3 PHP](#user-content-33-php)
+* [2. Preliminary considerations](#user-content-2-preliminary-considerations)
+  * [2.1 Unciphered message transfer](#user-content-21-unciphered-message-transfer)
+    * [2.1.1 Unciphered transfer](#user-content-211-unciphered-transfer)
+  * [2.2 Ciphered message transfer](#user-content-22-ciphered-message-transfer)
+    * [2.2.1 Symmetric cryptography](#user-content-221-symmetric-cryptography)
+    * [2.2.2 Asymmetric cryptography](#user-content-222-asymmetric-cryptography)
+    * [2.2.3 Hybrid cryptography](#user-content-223-hybrid-cryptography)
+* [3. Implementations](#user-content-3-implementations)
+  * [3.1 Bash](#user-content-31-bash)
+  * [3.2 Javascript](#user-content-32-javascript)
+  * [3.3 PHP](#user-content-33-php)
   
 ## 1. Rules of information security
 
