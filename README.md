@@ -5,6 +5,7 @@ This is a tutorial to securely transfer messages from a to b with various coding
 ## 0. Contents
 
 * [1. Preliminary considerations](#user-content-preliminary-considerations)
+  * [1.0 Unciphered message transfer](#user-content-unciphered-message-transfer)
   * [1.1 Symmetric cryptography](#user-content-symmetric-cryptography)
   * [1.2 Asymmetric cryptography](#user-content-asymmetric-cryptography)
   * [1.3 Hybrid cryptography](#user-content-hybrid-cryptography)
@@ -14,6 +15,12 @@ This is a tutorial to securely transfer messages from a to b with various coding
   * [2.3 PHP](#user-content-php)
 
 ## 1. Preliminary considerations
+
+### 1.0 Unciphered message transfer
+
+#### 1.1.1 Advantages
+
+#### 1.1.2 Disadvantage
 
 ### 1.1 Symmetric cryptography
 
