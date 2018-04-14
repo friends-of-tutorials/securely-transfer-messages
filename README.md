@@ -26,11 +26,11 @@ This is a tutorial to securely transfer messages from system 1 to system 2 with 
 
 ### 1.2 integrity
 
-* https://en.wikipedia.org/wiki/Data_integrity
+* https://en.wikipedia.org/wiki/Information_security#Integrity
 
 ### 1.3 availability
 
-* https://en.wikipedia.org/wiki/Availability
+* https://en.wikipedia.org/wiki/Information_security#Availability
 
 ### 1.4 authenticity
 
