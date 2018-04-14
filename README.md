@@ -22,6 +22,8 @@ This is a tutorial to securely transfer messages from a to b with various coding
 
 #### 1.1.1 Unciphered transfer
 
+![No cryptography](/images/no_cryptography.png)
+
 ##### 1.1.1.1 Advantages
 
 ##### 1.1.1.2 Disadvantage
