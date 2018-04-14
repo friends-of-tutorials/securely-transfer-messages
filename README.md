@@ -4,17 +4,17 @@ This is a tutorial to securely transfer messages from a to b with various coding
 
 ## 0. Contents
 
-* [1. Preliminary considerations](#user-content-preliminary-considerations)
-  * [1.1 Unciphered message transfer](#user-content-unciphered-message-transfer)
-    * [1.1.1 Unciphered transfer](#user-content-unciphered-transfer)
-  * [1.2 Ciphered message transfer](#user-content-ciphered-message-transfer)
-    * [1.2.1 Symmetric cryptography](#user-content-symmetric-cryptography)
-    * [1.2.2 Asymmetric cryptography](#user-content-asymmetric-cryptography)
-    * [1.2.3 Hybrid cryptography](#user-content-hybrid-cryptography)
-* [2. Implementations](#user-content-implementations)
-  * [2.1 Bash](#user-content-bash)
-  * [2.2 Javascript](#user-content-javascript)
-  * [2.3 PHP](#user-content-php)
+* [1. Preliminary considerations](#user-content-1-preliminary-considerations)
+  * [1.1 Unciphered message transfer](#user-content-11-unciphered-message-transfer)
+    * [1.1.1 Unciphered transfer](#user-content-111-unciphered-transfer)
+  * [1.2 Ciphered message transfer](#user-content-12-ciphered-message-transfer)
+    * [1.2.1 Symmetric cryptography](#user-content-121-symmetric-cryptography)
+    * [1.2.2 Asymmetric cryptography](#user-content-122-asymmetric-cryptography)
+    * [1.2.3 Hybrid cryptography](#user-content-123-hybrid-cryptography)
+* [2. Implementations](#user-content-2-implementations)
+  * [2.1 Bash](#user-content-21-bash)
+  * [2.2 Javascript](#user-content-22-javascript)
+  * [2.3 PHP](#user-content-23-php)
 
 ## 1. Preliminary considerations
 
