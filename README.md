@@ -26,17 +26,25 @@ This is a tutorial to securely transfer messages from system 1 to system 2 with 
 
 ### 1.1 confidentiality
 
+Data may only be read or modified by authorized users, both when accessing stored data and during data transmission.
+
 * https://en.wikipedia.org/wiki/Information_security#Confidentiality
 
 ### 1.2 integrity
+
+Data may not be changed unnoticed. All changes must be traceable.
 
 * https://en.wikipedia.org/wiki/Information_security#Integrity
 
 ### 1.3 availability
 
+All changes must be traceable. Prevention of system failures. Access to data must be guaranteed within an agreed timeframe.
+
 * https://en.wikipedia.org/wiki/Information_security#Availability
 
 ### 1.4 authenticity
+
+Authenticity refers to the characteristics of the authenticity, verifiability and trustworthiness of an object.
 
 * https://en.wikipedia.org/wiki/Message_authentication
 
