@@ -5,40 +5,46 @@ This is a tutorial to securely transfer messages from a to b with various coding
 ## 0. Contents
 
 * [1. Preliminary considerations](#user-content-preliminary-considerations)
-  * [1.0 Unciphered message transfer](#user-content-unciphered-message-transfer)
-  * [1.1 Symmetric cryptography](#user-content-symmetric-cryptography)
-  * [1.2 Asymmetric cryptography](#user-content-asymmetric-cryptography)
-  * [1.3 Hybrid cryptography](#user-content-hybrid-cryptography)
+ * [1.1 Unciphered message transfer](#user-content-unciphered-message-transfer)
+  * [1.1.1 Unciphered transfer](#user-content-unciphered-transfer)
+ * [1.2 Ciphered message transfer](#user-content-ciphered-message-transfer)
+  * [1.2.1 Symmetric cryptography](#user-content-symmetric-cryptography)
+  * [1.2.2 Asymmetric cryptography](#user-content-asymmetric-cryptography)
+  * [1.2.3 Hybrid cryptography](#user-content-hybrid-cryptography)
 * [2. Implementations](#user-content-implementations)
-  * [2.1 Bash](#user-content-bash)
-  * [2.2 Javascript](#user-content-javascript)
-  * [2.3 PHP](#user-content-php)
+ * [2.1 Bash](#user-content-bash)
+ * [2.2 Javascript](#user-content-javascript)
+ * [2.3 PHP](#user-content-php)
 
 ## 1. Preliminary considerations
 
-### 1.0 Unciphered message transfer
+### 1.1 Unciphered message transfer
 
-#### 1.1.1 Advantages
+#### 1.1.1 Unciphered transfer
 
-#### 1.1.2 Disadvantage
+##### 1.1.1.1 Advantages
 
-### 1.1 Symmetric cryptography
+##### 1.1.1.2 Disadvantage
 
-#### 1.1.1 Advantages
+### 1.2 Ciphered message transfer
 
-#### 1.1.2 Disadvantage
+#### 1.2.1 Symmetric cryptography
 
-### 1.2 Asymmetrical cryptography
+##### 1.2.1.1 Advantages
 
-#### 1.2.1 Advantages
+##### 1.2.1.2 Disadvantage
 
-#### 1.2.2 Disadvantage
+#### 1.2.2 Asymmetrical cryptography
 
-### 1.3 Hybrid cryptography
+##### 1.2.2.1 Advantages
 
-#### 1.3.1 Advantages
+##### 1.2.2.2 Disadvantage
 
-#### 1.3.2 Disadvantage
+#### 1.2.3 Hybrid cryptography
+
+##### 1.2.3.1 Advantages
+
+##### 1.2.3.2 Disadvantage
 
 ## 2. Implementations
 
