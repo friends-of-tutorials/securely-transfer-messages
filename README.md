@@ -35,6 +35,7 @@ This is a tutorial to securely transfer messages from system 1 to system 2 with 
 * the message is catchable and breaks some rules of information security:
   * confidentiality
   * integrity
+  * authenticity
 
 ### 2.2 Ciphered message transfer
 
