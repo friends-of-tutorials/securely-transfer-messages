@@ -48,7 +48,11 @@ This is a tutorial to securely transfer messages from a to b with various coding
 
 #### 1.2.3 Hybrid cryptography
 
+**Version 1 (The receiving system generates the symmetric key)**
+
 ![No cryptography](/images/hybrid_cryptography.png)
+
+**Version 2 (The transmitting system generates the symmetric key)**
 
 ![No cryptography](/images/hybrid_cryptography_2.png)
 
