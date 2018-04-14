@@ -5,6 +5,10 @@ This is a tutorial to securely transfer messages from system 1 to system 2 with 
 ## 0. Contents
 
 * [1. Rules of information security](#user-content-1-rules-of-information-security)
+  * [1.1 confidentiality](#user-content-11-confidentiality)
+  * [1.2 integrity](#user-content-12-integrity)
+  * [1.3 availability](#user-content-13-availability)
+  * [1.4 authenticity](#user-content-14-authenticity)
 * [2. Preliminary considerations](#user-content-2-preliminary-considerations)
   * [2.1 Unciphered message transfer](#user-content-21-unciphered-message-transfer)
     * [2.1.1 Unciphered transfer](#user-content-211-unciphered-transfer)
