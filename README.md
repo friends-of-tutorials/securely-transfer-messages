@@ -38,7 +38,7 @@ Data may not be changed unnoticed. All changes must be traceable.
 
 ### 1.3 availability
 
-All changes must be traceable. Prevention of system failures. Access to data must be guaranteed within an agreed timeframe.
+Prevention of system failures: Access to data must be guaranteed within an agreed timeframe.
 
 * https://en.wikipedia.org/wiki/Information_security#Availability
 
