@@ -16,11 +16,12 @@ This is a tutorial to securely transfer messages from system 1 to system 2 with 
     * [2.2.1 Symmetric cryptography](#user-content-221-symmetric-cryptography)
     * [2.2.2 Asymmetric cryptography](#user-content-222-asymmetric-cryptography)
     * [2.2.3 Hybrid cryptography](#user-content-223-hybrid-cryptography)
-* [3. Implementations](#user-content-3-implementations)
-  * [3.0 Building public and private key (asymmetric and hybrid cryptopgraphy)](#user-content-30-building-public-and-private-key-asymmetric-and-hybrid-cryptopgraphy)
-  * [3.1 Bash](#user-content-31-bash)
-  * [3.2 Javascript](#user-content-32-javascript)
-  * [3.3 PHP](#user-content-33-php)
+* [3. Preparations](#user-content-3-preparations)
+  * [3.1 Building public and private key (asymmetric and hybrid cryptopgraphy)](#user-content-31-building-public-and-private-key-asymmetric-and-hybrid-cryptopgraphy)
+* [4. Implementations](#user-content-4-implementations)
+  * [4.1 Bash](#user-content-41-bash)
+  * [4.2 Javascript](#user-content-42-javascript)
+  * [4.3 PHP](#user-content-43-php)
   
 ## 1. Rules of information security
 
@@ -134,42 +135,14 @@ Authenticity refers to the characteristics of the authenticity, verifiability an
 
 ##### 2.2.3.3 Disadvantage
 
-## 3. Implementations
+## 3. Preparations
 
-### 3.0 Building public and private key (asymmetric and hybrid cryptopgraphy)
+### 3.1 Building public and private key (asymmetric and hybrid cryptopgraphy)
 
-#### Bash example
-
-Private key: private.pem
-
-Public key: public.pem
+#### 3.1.1 Private key: private.pem
 
 ```
 user$ openssl genpkey -algorithm RSA -out private.pem -pkeyopt rsa_keygen_bits:2048
-user$ openssl rsa -pubout -in private.pem -out public.pem
-```
-
-##### Example public.pem
-
-```
-user$ cat public.pem
-```
-
-```
------BEGIN PUBLIC KEY-----
-MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoQcfLo00xicP5oJ8yIcl
-gtVNZBka2ppKfU7MyRJbNpQYIlbJBmiFYa2tNitYGF0TaMA3k2Z5omnBat2MEE5U
-2+ojWBGockrhZa+0h61CrFGuT9tqDehF7HxP2JGyfiQ3k1M8oxBNcOEATO7lqhHV
-CEfYXtwA7wnpwZRrG1JYcRyBPLkVTNWctX0SJ3DpZzrPTJwWEO5vs2+8gxSoa9c4
-0zLWBnNwcCJ0VDMTV2WnTVUFweUXprg5b3vNtcridQ1/sS0ZCx2UicxpHdt5MatW
-N30IaMNaaE4YrFCbGwMjpjZ82qcEqFEh67bFtf/3PDbt6kLfGOp1ajSoYgvZoSBR
-MQIDAQAB
------END PUBLIC KEY-----
-```
-
-##### Example private.pem
-
-```
 user$ cat private.pem
 ```
 
@@ -204,23 +177,44 @@ SyuRojfsMfUIFOQJ6NCW2w==
 -----END PRIVATE KEY-----
 ```
 
-### 3.1 Bash
+#### 3.1.2 Public key: public.pem
 
-#### 3.1.1 Encryption
+```
+user$ openssl rsa -pubout -in private.pem -out public.pem
+user$ cat public.pem
+```
 
-#### 3.1.2 Decryption
+```
+-----BEGIN PUBLIC KEY-----
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoQcfLo00xicP5oJ8yIcl
+gtVNZBka2ppKfU7MyRJbNpQYIlbJBmiFYa2tNitYGF0TaMA3k2Z5omnBat2MEE5U
+2+ojWBGockrhZa+0h61CrFGuT9tqDehF7HxP2JGyfiQ3k1M8oxBNcOEATO7lqhHV
+CEfYXtwA7wnpwZRrG1JYcRyBPLkVTNWctX0SJ3DpZzrPTJwWEO5vs2+8gxSoa9c4
+0zLWBnNwcCJ0VDMTV2WnTVUFweUXprg5b3vNtcridQ1/sS0ZCx2UicxpHdt5MatW
+N30IaMNaaE4YrFCbGwMjpjZ82qcEqFEh67bFtf/3PDbt6kLfGOp1ajSoYgvZoSBR
+MQIDAQAB
+-----END PUBLIC KEY-----
+```
 
-### 3.2 Javascript
+## 4. Implementations
 
-#### 3.2.1 Encryption
+### 4.1 Bash
 
-#### 3.2.2 Decryption
+#### 4.1.1 Encryption
 
-### 3.3 PHP
+#### 4.1.2 Decryption
 
-#### 3.3.1 Encryption
+### 4.2 Javascript
 
-#### 3.3.2 Decryption
+#### 4.2.1 Encryption
+
+#### 4.2.2 Decryption
+
+### 4.3 PHP
+
+#### 4.3.1 Encryption
+
+#### 4.3.2 Decryption
 
 ## A. Authors
 
