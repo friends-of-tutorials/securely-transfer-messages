@@ -139,7 +139,7 @@ Authenticity refers to the characteristics of the authenticity, verifiability an
 
 ### 3.1 Building public and private key (asymmetric and hybrid cryptopgraphy)
 
-#### 3.1.1 Private key: private.pem
+#### 3.1.1 Private key (private.pem)
 
 ```
 user$ openssl genpkey -algorithm RSA -out private.pem -pkeyopt rsa_keygen_bits:2048
@@ -177,7 +177,7 @@ SyuRojfsMfUIFOQJ6NCW2w==
 -----END PRIVATE KEY-----
 ```
 
-#### 3.1.2 Public key: public.pem
+#### 3.1.2 Public key (public.pem)
 
 ```
 user$ openssl rsa -pubout -in private.pem -out public.pem
