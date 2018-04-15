@@ -28,7 +28,7 @@ This is a tutorial to securely transfer messages from system 1 to system 2 with 
 
 Data may only be read or modified by authorized users, both when accessing stored data and during data transmission.
 
-* https://en.wikipedia.org/wiki/Information_security#Confidentiality
+* [Confidentiality on wikipedia.org](https://en.wikipedia.org/wiki/Information_security#Confidentiality)
 
 ### 1.2 integrity
 
