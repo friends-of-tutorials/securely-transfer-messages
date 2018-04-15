@@ -208,3 +208,13 @@ SyuRojfsMfUIFOQJ6NCW2w==
 #### 3.3.1 Encryption
 
 #### 3.3.2 Decryption
+
+## A. Authors
+
+* Björn Hempel <bjoern@hempel.li> - _Initial work_ - [https://github.com/bjoern-hempel](https://github.com/bjoern-hempel)
+
+## B. License
+
+This project is licensed under the MIT License - see the [LICENSE](/LICENSE) file for details
+
+
