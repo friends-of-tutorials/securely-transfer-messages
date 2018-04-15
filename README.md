@@ -106,6 +106,14 @@ Authenticity refers to the characteristics of the authenticity, verifiability an
 
 ##### 2.2.2.1 Implementations
 
+* [RSA](https://en.wikipedia.org/wiki/RSA_(cryptosystem))
+* [Merkle-Hellman](https://en.wikipedia.org/wiki/Merkle%E2%80%93Hellman_knapsack_cryptosystem)
+*	[McEliece](https://en.wikipedia.org/wiki/McEliece_cryptosystem)
+*	[Rabin](https://en.wikipedia.org/wiki/Rabin_cryptosystem)
+*	Chor-Rivest
+*	[Elgamal](https://en.wikipedia.org/wiki/ElGamal_encryption)
+
+
 ##### 2.2.2.2 Advantages
 
 ##### 2.2.2.3 Disadvantage
