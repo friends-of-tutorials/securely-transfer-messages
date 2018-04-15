@@ -227,6 +227,83 @@ key=71EB7C9E4F6E4B4A1341E4AD519FB22D0BD4A0AF0B8CB77FEA0C6E1F82870B0C
 iv=10A8C339AEC170CCBA8D3816785F67F6
 ```
 
+Encrypt the key and iv with the public key "public.pem":
+
+```
+user$ $ rsaCiphertext=$(\
+    openssl enc -nosalt -aes-256-cbc -nosalt -pass pass:MySecretPassphrase -P | \
+    sed 's/key=\([0-9a-z]\+\)/\1:/gi' | \
+    sed 's/iv =\([0-9a-z]\+\)/\1/gi' | \
+    tr --delete '\n' | \
+    openssl rsautl -encrypt -pubin -inkey public.pem | \
+    base64 \
+) && echo -e "$rsaCiphertext"
+```
+
+For example, the output is as below and different from yours:
+
+```
+NdqZLQkmyq3BVgz5M1F/wWX/KNIBxkYWGau3JS6r7t88o08KbsT7N7paS7SsUnclWtLj2Dt4YLu5
+7sybKc1m8S/vXj4pJ4wQicgSv2+KvV0baebQ/jw559W8y52HPKj/KNEL/uf1NULijyn0fVuMzaWn
+bz0UTwN7NVfZcG5ohyXOLEiS6eEkGIHeqAV7VcJf51wxNMHg0aH1ENB/3Zs7zUY6lQJtUIIDZYiF
+/c9QMg49g8RytB8Bkg7Fqd5DmptbjXXbGAK3TAKOfdKv3H8TOtkItQGg9DILCRrBzX0PgdpmnRCE
+EftyO2lwVc88+ql2+GVFRkxxOlSdQ46FTeryag==
+```
+
+##### 4.1.1.2 Encrypt the message
+
+For example with AES encryption and the passphrase:
+
+```
+user$ aesCiphertext=$(\
+    echo -en "Hello world! :)\n\nThis is my secret text." | \
+    openssl enc -base64 -e -aes-256-cbc -nosalt -pass pass:MySecretPassphrase \
+) && echo -e "$aesCiphertext"
+```
+
+The result :
+
+```
+4FFWdfqQzuMd/JP3fvpriRC5oajS8ENpCD3ZOxDVBZmWAFPhIkb4iVbWYnWPDNCw
+```
+
+##### 4.1.1.3 Combine the RSA ciphertext and AES ciphertext
+
+```
+user$ echo -e "$rsaCiphertext\n\n$aesCiphertext"
+```
+
+With the result:
+
+```
+NdqZLQkmyq3BVgz5M1F/wWX/KNIBxkYWGau3JS6r7t88o08KbsT7N7paS7SsUnclWtLj2Dt4YLu5
+7sybKc1m8S/vXj4pJ4wQicgSv2+KvV0baebQ/jw559W8y52HPKj/KNEL/uf1NULijyn0fVuMzaWn
+bz0UTwN7NVfZcG5ohyXOLEiS6eEkGIHeqAV7VcJf51wxNMHg0aH1ENB/3Zs7zUY6lQJtUIIDZYiF
+/c9QMg49g8RytB8Bkg7Fqd5DmptbjXXbGAK3TAKOfdKv3H8TOtkItQGg9DILCRrBzX0PgdpmnRCE
+EftyO2lwVc88+ql2+GVFRkxxOlSdQ46FTeryag==
+
+4FFWdfqQzuMd/JP3fvpriRC5oajS8ENpCD3ZOxDVBZmWAFPhIkb4iVbWYnWPDNCw
+```
+
+Encode the result with base64:
+
+```
+user$ echo -en "$rsaCiphertext\n\n$aesCiphertext" | base64
+```
+
+The following combined ciphertext is only decryptable with the private key (private.pem) and can be safely sent over any data network:
+
+```
+TmRxWkxRa215cTNCVmd6NU0xRi93V1gvS05JQnhrWVdHYXUzSlM2cjd0ODhvMDhLYnNUN043cGFT
+N1NzVW5jbFd0TGoyRHQ0WUx1NQo3c3liS2MxbThTL3ZYajRwSjR3UWljZ1N2MitLdlYwYmFlYlEv
+anc1NTlXOHk1MkhQS2ovS05FTC91ZjFOVUxpanluMGZWdU16YVduCmJ6MFVUd043TlZmWmNHNW9o
+eVhPTEVpUzZlRWtHSUhlcUFWN1ZjSmY1MXd4Tk1IZzBhSDFFTkIvM1pzN3pVWTZsUUp0VUlJRFpZ
+aUYKL2M5UU1nNDlnOFJ5dEI4QmtnN0ZxZDVEbXB0YmpYWGJHQUszVEFLT2ZkS3YzSDhUT3RrSXRR
+R2c5RElMQ1JyQnpYMFBnZHBtblJDRQpFZnR5TzJsd1ZjODgrcWwyK0dWRlJreHhPbFNkUTQ2RlRl
+cnlhZz09Cgo0RkZXZGZxUXp1TWQvSlAzZnZwcmlSQzVvYWpTOEVOcENEM1pPeERWQlptV0FGUGhJ
+a2I0aVZiV1luV1BETkN3
+```
+
 #### 4.1.2 Decryption
 
 ### 4.2 Javascript
