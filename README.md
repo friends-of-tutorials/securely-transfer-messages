@@ -202,6 +202,31 @@ MQIDAQAB
 
 #### 4.1.1 Encryption
 
+##### 4.1.1.1 Generate the iv and key from given passphrase
+
+The passphrase is "MySecretPassphrase":
+
+```
+user$ openssl enc -nosalt -aes-256-cbc -nosalt -pass pass:MySecretPassphrase -P | \
+sed 's/key=\([0-9a-z]\+\)/\1:/gi' | \
+sed 's/iv =\([0-9a-z]\+\)/\1/gi' | \
+tr --delete '\n'
+```
+
+The result is:
+
+```
+71EB7C9E4F6E4B4A1341E4AD519FB22D0BD4A0AF0B8CB77FEA0C6E1F82870B0C:10A8C339AEC170CCBA8D3816785F67F6
+```
+
+Which means:
+
+```
+passphrase=MySecretPassphrase
+key=71EB7C9E4F6E4B4A1341E4AD519FB22D0BD4A0AF0B8CB77FEA0C6E1F82870B0C
+iv=10A8C339AEC170CCBA8D3816785F67F6
+```
+
 #### 4.1.2 Decryption
 
 ### 4.2 Javascript
