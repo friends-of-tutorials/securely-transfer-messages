@@ -103,9 +103,11 @@ Authenticity refers to the characteristics of the authenticity, verifiability an
 
 [![No cryptography](/images/asymmetric_cryptography.png)](/images/asymmetric_cryptography.png)
 
-##### 2.2.2.1 Advantages
+##### 2.2.2.1 Implementations
 
-##### 2.2.2.2 Disadvantage
+##### 2.2.2.2 Advantages
+
+##### 2.2.2.3 Disadvantage
 
 #### 2.2.3 Hybrid cryptography
 
@@ -117,9 +119,11 @@ Authenticity refers to the characteristics of the authenticity, verifiability an
 
 [![No cryptography](/images/hybrid_cryptography_2.png)](/images/hybrid_cryptography_2.png)
 
-##### 2.2.3.1 Advantages
+##### 2.2.3.1 Implementations
 
-##### 2.2.3.2 Disadvantage
+##### 2.2.3.2 Advantages
+
+##### 2.2.3.3 Disadvantage
 
 ## 3. Implementations
 
