@@ -71,7 +71,7 @@ Authenticity refers to the characteristics of the authenticity, verifiability an
 
 #### 2.2.1 Symmetric cryptography
 
-![No cryptography](/images/symmetric_cryptography.png)
+[![No cryptography](/images/symmetric_cryptography.png)](/images/symmetric_cryptography.png)
 
 ##### 2.2.1.1 Advantages
 
@@ -79,7 +79,7 @@ Authenticity refers to the characteristics of the authenticity, verifiability an
 
 #### 2.2.2 Asymmetrical cryptography
 
-![No cryptography](/images/asymmetric_cryptography.png)
+[![No cryptography](/images/asymmetric_cryptography.png)](/images/asymmetric_cryptography.png)
 
 ##### 2.2.2.1 Advantages
 
@@ -89,11 +89,11 @@ Authenticity refers to the characteristics of the authenticity, verifiability an
 
 **Version 1 - The receiving system generates the symmetric key**
 
-![No cryptography](/images/hybrid_cryptography.png)
+[![No cryptography](/images/hybrid_cryptography.png)](/images/hybrid_cryptography.png)
 
 **Version 2 - The transmitting system generates the symmetric key**
 
-![No cryptography](/images/hybrid_cryptography_2.png)
+[![No cryptography](/images/hybrid_cryptography_2.png)](/images/hybrid_cryptography_2.png)
 
 ##### 2.2.3.1 Advantages
 
