@@ -54,7 +54,7 @@ Authenticity refers to the characteristics of the authenticity, verifiability an
 
 #### 2.1.1 Unciphered transfer
 
-![No cryptography](/images/no_cryptography.png)
+[![No cryptography](/images/no_cryptography.png)](/images/no_cryptography.png)
 
 ##### 2.1.1.1 Advantages
 
