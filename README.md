@@ -328,6 +328,41 @@ EftyO2lwVc88+ql2+GVFRkxxOlSdQ46FTeryag==
 4FFWdfqQzuMd/JP3fvpriRC5oajS8ENpCD3ZOxDVBZmWAFPhIkb4iVbWYnWPDNCw
 ```
 
+
+Now. Split the result. The asymmetrical part:
+
+```
+user$ cat cipher.txt | base64 --decode | sed '/^$/q'
+```
+
+```
+NdqZLQkmyq3BVgz5M1F/wWX/KNIBxkYWGau3JS6r7t88o08KbsT7N7paS7SsUnclWtLj2Dt4YLu5
+7sybKc1m8S/vXj4pJ4wQicgSv2+KvV0baebQ/jw559W8y52HPKj/KNEL/uf1NULijyn0fVuMzaWn
+bz0UTwN7NVfZcG5ohyXOLEiS6eEkGIHeqAV7VcJf51wxNMHg0aH1ENB/3Zs7zUY6lQJtUIIDZYiF
+/c9QMg49g8RytB8Bkg7Fqd5DmptbjXXbGAK3TAKOfdKv3H8TOtkItQGg9DILCRrBzX0PgdpmnRCE
+EftyO2lwVc88+ql2+GVFRkxxOlSdQ46FTeryag==
+```
+
+The symmetrical part:
+
+```
+user$ cat cipher.txt | base64 --decode | sed '1,/^$/d'
+```
+
+```
+4FFWdfqQzuMd/JP3fvpriRC5oajS8ENpCD3ZOxDVBZmWAFPhIkb4iVbWYnWPDNCw
+```
+
+Decrypt the key and iv:
+
+```
+user$ cat cipher.txt | base64 --decode | sed '/^$/q' | base64 --decode | openssl rsautl -decrypt -ssl -inkey private.pem
+```
+
+```
+71EB7C9E4F6E4B4A1341E4AD519FB22D0BD4A0AF0B8CB77FEA0C6E1F82870B0C:10A8C339AEC170CCBA8D3816785F67F6
+```
+
 ### 4.2 Javascript
 
 #### 4.2.1 Encryption
