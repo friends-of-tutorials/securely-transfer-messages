@@ -92,6 +92,7 @@ Authenticity refers to the characteristics of the authenticity, verifiability an
 * simple key management, it only needs one secret key for ciphering and deciphering
 * a symmetrical cryptosystem is faster than an asymmetrical one
 * only a system which possesses the secret key are able to decrypt a message
+* the encryption itself is fully compatible with the confidentiality provisions of information security
 
 ##### 2.2.1.3 Disadvantage
 
