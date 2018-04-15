@@ -73,9 +73,23 @@ Authenticity refers to the characteristics of the authenticity, verifiability an
 
 [![No cryptography](/images/symmetric_cryptography.png)](/images/symmetric_cryptography.png)
 
-##### 2.2.1.1 Advantages
+##### 2.2.1.1 Implementations
 
-##### 2.2.1.2 Disadvantage
+* [DES (Data Encryption Standard)](https://en.wikipedia.org/wiki/Data_Encryption_Standard)
+* [Triple-DES (also TDES, 3DES or DESede)](https://en.wikipedia.org/wiki/Triple_DES)
+* [AES (Advanced Encryption Standard)](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard)
+* [IDEA (International Data Encryption Algorithm)](https://en.wikipedia.org/wiki/International_Data_Encryption_Algorithm)
+* [Twofish](https://en.wikipedia.org/wiki/Twofish)
+* [Serpent](https://en.wikipedia.org/wiki/Serpent_(cipher))
+* [Blowfish](https://en.wikipedia.org/wiki/Blowfish_(cipher))
+* [Кузнечик](https://en.wikipedia.org/wiki/Kuznyechik)
+* [CAST-128](https://en.wikipedia.org/wiki/CAST-128), [CAST-256](https://en.wikipedia.org/wiki/CAST-256)
+* [RC2](https://en.wikipedia.org/wiki/RC2), [RC4](https://en.wikipedia.org/wiki/RC4), [RC5](https://en.wikipedia.org/wiki/RC5), [RC6](https://en.wikipedia.org/wiki/RC6)
+* etc.
+
+##### 2.2.1.2 Advantages
+
+##### 2.2.1.3 Disadvantage
 
 #### 2.2.2 Asymmetrical cryptography
 
