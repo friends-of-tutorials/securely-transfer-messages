@@ -304,7 +304,29 @@ cnlhZz09Cgo0RkZXZGZxUXp1TWQvSlAzZnZwcmlSQzVvYWpTOEVOcENEM1pPeERWQlptV0FGUGhJ
 a2I0aVZiV1luV1BETkN3
 ```
 
+Write the ciphertext to file:
+
+```
+user$ echo -en "$rsaCiphertext\n\n$aesCiphertext" | base64 > cipher.txt
+```
+
 #### 4.1.2 Decryption
+
+```
+user$ cat cipher.txt | base64 --decode
+```
+
+The expected result is:
+
+```
+NdqZLQkmyq3BVgz5M1F/wWX/KNIBxkYWGau3JS6r7t88o08KbsT7N7paS7SsUnclWtLj2Dt4YLu5
+7sybKc1m8S/vXj4pJ4wQicgSv2+KvV0baebQ/jw559W8y52HPKj/KNEL/uf1NULijyn0fVuMzaWn
+bz0UTwN7NVfZcG5ohyXOLEiS6eEkGIHeqAV7VcJf51wxNMHg0aH1ENB/3Zs7zUY6lQJtUIIDZYiF
+/c9QMg49g8RytB8Bkg7Fqd5DmptbjXXbGAK3TAKOfdKv3H8TOtkItQGg9DILCRrBzX0PgdpmnRCE
+EftyO2lwVc88+ql2+GVFRkxxOlSdQ46FTeryag==
+
+4FFWdfqQzuMd/JP3fvpriRC5oajS8ENpCD3ZOxDVBZmWAFPhIkb4iVbWYnWPDNCw
+```
 
 ### 4.2 Javascript
 
