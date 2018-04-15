@@ -240,7 +240,7 @@ user$ $ rsaCiphertext=$(\
 ) && echo -e "$rsaCiphertext"
 ```
 
-For example, the output is as below and different from yours:
+For example the output below which differs from yours:
 
 ```
 NdqZLQkmyq3BVgz5M1F/wWX/KNIBxkYWGau3JS6r7t88o08KbsT7N7paS7SsUnclWtLj2Dt4YLu5
@@ -261,7 +261,7 @@ user$ aesCiphertext=$(\
 ) && echo -e "$aesCiphertext"
 ```
 
-The result :
+The result:
 
 ```
 4FFWdfqQzuMd/JP3fvpriRC5oajS8ENpCD3ZOxDVBZmWAFPhIkb4iVbWYnWPDNCw
