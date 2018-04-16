@@ -204,7 +204,7 @@ MQIDAQAB
 
 ##### 4.1.1.1 Generate the iv and key from given passphrase
 
-The passphrase is "MySecretPassphrase":
+The passphrase is "MySecretPassphrase". In some cases you will need the passphrase. In some cases the equivalent iv and key:
 
 ```
 user$ openssl enc -nosalt -aes-256-cbc -nosalt -pass pass:MySecretPassphrase -P | \
