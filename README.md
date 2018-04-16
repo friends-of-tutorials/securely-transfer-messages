@@ -355,7 +355,7 @@ user$ cat cipher.txt | base64 --decode | sed '1,/^$/d'
 4FFWdfqQzuMd/JP3fvpriRC5oajS8ENpCD3ZOxDVBZmWAFPhIkb4iVbWYnWPDNCw
 ```
 
-##### 4.1.2.2 Decrypt the key and iv
+##### 4.1.2.2 Decrypt the key and iv (from asymmetrical part)
 
 ```
 user$ cat cipher.txt | base64 --decode | sed '/^$/q' | base64 --decode | openssl rsautl -decrypt -ssl -inkey private.pem
@@ -365,7 +365,7 @@ user$ cat cipher.txt | base64 --decode | sed '/^$/q' | base64 --decode | openssl
 71EB7C9E4F6E4B4A1341E4AD519FB22D0BD4A0AF0B8CB77FEA0C6E1F82870B0C:10A8C339AEC170CCBA8D3816785F67F6
 ```
 
-##### 4.1.2.3 Decrypt the ciphertext
+##### 4.1.2.3 Decrypt the ciphertext (from symmetrical part)
 
 With the passphrase above:
 
