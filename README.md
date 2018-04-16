@@ -363,10 +363,22 @@ user$ cat cipher.txt | base64 --decode | sed '/^$/q' | base64 --decode | openssl
 71EB7C9E4F6E4B4A1341E4AD519FB22D0BD4A0AF0B8CB77FEA0C6E1F82870B0C:10A8C339AEC170CCBA8D3816785F67F6
 ```
 
-Decrypt the ciphertext:
+Decrypt the ciphertext with the passphrase above:
 
 ```
 user$ echo "4FFWdfqQzuMd/JP3fvpriRC5oajS8ENpCD3ZOxDVBZmWAFPhIkb4iVbWYnWPDNCw" | openssl enc -d -base64 -aes-256-cbc -nosalt -pass pass:MySecretPassphrase
+```
+
+```
+Hello world! :)
+
+This is my secret text.
+```
+
+Or with the iv and the related key:
+
+```
+$ echo "4FFWdfqQzuMd/JP3fvpriRC5oajS8ENpCD3ZOxDVBZmWAFPhIkb4iVbWYnWPDNCw" | openssl enc -d -base64 -aes-256-cbc -nosalt -K 71EB7C9E4F6E4B4A1341E4AD51A0C6E1F82870B0C -iv 10A8C339AEC170CCBA8D3816785F67F6
 ```
 
 ```
