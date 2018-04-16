@@ -314,7 +314,7 @@ cnlhZz09Cgo0RkZXZGZxUXp1TWQvSlAzZnZwcmlSQzVvYWpTOEVOcENEM1pPeERWQlptV0FGUGhJ
 a2I0aVZiV1luV1BETkN3
 ```
 
-Write the ciphertext to file:
+Write the complete ciphertext to file "cipher.txt":
 
 ```
 user$ echo -en "$rsaCiphertext\n\n$aesCiphertext" | base64 > cipher.txt
