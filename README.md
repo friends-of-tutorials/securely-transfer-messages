@@ -117,7 +117,11 @@ Authenticity refers to the characteristics of the authenticity, verifiability an
 
 ##### 2.2.2.2 Advantages
 
+TODO...
+
 ##### 2.2.2.3 Disadvantage
+
+TODO...
 
 #### 2.2.3 Hybrid cryptography
 
@@ -131,9 +135,15 @@ Authenticity refers to the characteristics of the authenticity, verifiability an
 
 ##### 2.2.3.1 Implementations
 
+TODO...
+
 ##### 2.2.3.2 Advantages
 
+TODO...
+
 ##### 2.2.3.3 Disadvantage
+
+TODO...
 
 ## 3. Preparations
 
@@ -393,15 +403,27 @@ This is my secret text.
 
 ### 4.2 Javascript
 
+TODO...
+
 #### 4.2.1 Encryption
+
+TODO...
 
 #### 4.2.2 Decryption
 
+TODO...
+
 ### 4.3 PHP
+
+TODO...
 
 #### 4.3.1 Encryption
 
+TODO...
+
 #### 4.3.2 Decryption
+
+TODO...
 
 ## A. Authors
 
