@@ -1,6 +1,6 @@
 # A tutorial to securely transfer messages
 
-This is a tutorial to securely transfer messages from system 1 to system 2 with various coding languages and keep the rules of information security.
+This is a tutorial to securely transfer messages from system A to system B with various coding languages and keep the rules of information security.
 
 ## 0. Contents
 
@@ -213,7 +213,7 @@ MQIDAQAB
 
 ### 4.1 Bash
 
-#### 4.1.1 Encryption
+#### 4.1.1 Encryption (System A)
 
 ##### 4.1.1.1 Generate the iv and key from given passphrase
 
@@ -323,7 +323,7 @@ Write the complete ciphertext to file "cipher.txt":
 user$ echo -en "$rsaCiphertext\n\n$aesCiphertext" | base64 > cipher.txt
 ```
 
-#### 4.1.2 Decryption
+#### 4.1.2 Decryption (System B)
 
 ##### 4.1.2.1 Get the asymmetrical and the symmetrical part
 
