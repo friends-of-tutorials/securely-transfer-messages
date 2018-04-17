@@ -113,6 +113,9 @@ Authenticity refers to the characteristics of the authenticity, verifiability an
 *	[Rabin](https://en.wikipedia.org/wiki/Rabin_cryptosystem)
 *	Chor-Rivest
 *	[Elgamal](https://en.wikipedia.org/wiki/ElGamal_encryption)
+* [Elliptic-curve cryptography](https://en.wikipedia.org/wiki/Elliptic-curve_cryptography)
+* [DSA](https://en.wikipedia.org/wiki/Digital_Signature_Algorithm)
+* [LUC Cryptography](https://www.cryptopp.com/wiki/LUC_Cryptography)
 
 
 ##### 2.2.2.2 Advantages
@@ -237,7 +240,7 @@ key=71EB7C9E4F6E4B4A1341E4AD519FB22D0BD4A0AF0B8CB77FEA0C6E1F82870B0C
 iv=10A8C339AEC170CCBA8D3816785F67F6
 ```
 
-Encrypt the key and iv with the public key "public.pem":
+Encrypt the key and iv or your secret passphrase, depending on what your decryption library supports. Below is the example with a key and iv. The combination will encrypted with the public key "public.pem":
 
 ```
 user$ $ rsaCiphertext=$(\
@@ -250,7 +253,7 @@ user$ $ rsaCiphertext=$(\
 ) && echo -e "$rsaCiphertext"
 ```
 
-For example the output below which differs from yours:
+As an example, the output below which differs from yours:
 
 ```
 NdqZLQkmyq3BVgz5M1F/wWX/KNIBxkYWGau3JS6r7t88o08KbsT7N7paS7SsUnclWtLj2Dt4YLu5
