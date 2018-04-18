@@ -522,7 +522,23 @@ aF/4UXNChWkvF87X9jZt7zC9zw==
 
 #### 3.3.2 Encryption (System A)
 
-TODO...
+```php
+$data = "Hello world! :)\n\nThis is my secret text.";
+$key = '71EB7C9E4F6E4B4A1341E4AD519FB22D0BD4A0AF0B8CB77FEA0C6E1F82870B0C';
+$iv = '10A8C339AEC170CCBA8D3816785F67F6';
+
+$cipher = 'aes-256-cbc';
+
+$ciphertext = openssl_encrypt($data, $cipher, hex2bin($key), 0, hex2bin($iv));
+
+echo $ciphertext;
+```
+
+It returns:
+
+```
+4FFWdfqQzuMd/JP3fvpriRC5oajS8ENpCD3ZOxDVBZmWAFPhIkb4iVbWYnWPDNCw
+```
 
 #### 3.3.3 Decryption (System B)
 
