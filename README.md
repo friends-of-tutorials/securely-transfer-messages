@@ -22,7 +22,14 @@ This is a tutorial to securely transfer messages from system A to system B with 
     * [3.1.2 Encryption (System A)](#user-content-312-encryption-system-a)
     * [3.1.3 Decryption (System B)](#user-content-313-decryption-system-b)
   * [3.2 Javascript](#user-content-32-javascript)
+    * [3.2.1 Preparations (public and private key)](#user-content-321-preparations-public-and-private-key)
+    * [3.2.2 Encryption (System A)](#user-content-322-encryption-system-a)
+    * [3.2.3 Decryption (System B)](#user-content-323-decryption-system-b)
   * [3.3 PHP](#user-content-33-php)
+    * [3.3.1 Preparations (public and private key)](#user-content-331-preparations-public-and-private-key)
+    * [3.3.2 Encryption (System A)](#user-content-332-encryption-system-a)
+    * [3.3.3 Decryption (System B)](#user-content-333-decryption-system-b)
+  
   
 ## 1. Rules of information security
 
@@ -427,25 +434,29 @@ This is my secret text.
 
 ### 3.2 Javascript
 
-TODO...
-
-#### 3.2.1 Encryption (System A)
+#### 3.2.1 Preparations (public and private key)
 
 TODO...
 
-#### 3.2.2 Decryption (System B)
+#### 3.2.2 Encryption (System A)
+
+TODO...
+
+#### 3.2.3 Decryption (System B)
 
 TODO...
 
 ### 3.3 PHP
 
-TODO...
-
-#### 3.3.1 Encryption (System A)
+#### 3.3.1 Preparations (public and private key)
 
 TODO...
 
-#### 3.3.2 Decryption (System B)
+#### 3.3.2 Encryption (System A)
+
+TODO...
+
+#### 3.3.3 Decryption (System B)
 
 TODO...
 
