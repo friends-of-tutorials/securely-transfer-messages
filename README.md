@@ -420,11 +420,11 @@ This is my secret text.
 
 TODO...
 
-#### 4.2.1 Encryption
+#### 4.2.1 Encryption (System A)
 
 TODO...
 
-#### 4.2.2 Decryption
+#### 4.2.2 Decryption (System B)
 
 TODO...
 
@@ -432,11 +432,11 @@ TODO...
 
 TODO...
 
-#### 4.3.1 Encryption
+#### 4.3.1 Encryption (System A)
 
 TODO...
 
-#### 4.3.2 Decryption
+#### 4.3.2 Decryption (System B)
 
 TODO...
 
