@@ -450,7 +450,104 @@ TODO...
 
 #### 3.3.1 Preparations (public and private key)
 
-TODO...
+```
+<?php
+  
+/* Configuration settings for the key */
+$config = array(
+    "digest_alg" => "sha512",
+    "private_key_bits" => 4096,
+    "private_key_type" => OPENSSL_KEYTYPE_RSA,
+);
+
+/* Create the private and public key */
+$res = openssl_pkey_new($config);
+
+/* Extract the private key into $private_key */
+openssl_pkey_export($res, $private_key);
+
+/* Extract the public key into $public_key */
+$public_key = openssl_pkey_get_details($res);
+$public_key = $public_key["key"];
+
+/* echo the public key */
+echo $public_key."\n";
+
+/* echo the private key */
+echo $private_key."\n";
+```
+
+```
+-----BEGIN PUBLIC KEY-----
+MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAsiltxODGMWWn6jJbsu64
+/nmkZMYSFzEqdr61FVZN+u3C2oxioTAQvHYiCXvH0Kzek69hjDUE8UOcNoQWJ2C1
+N7gmUdj+j4CaaGlU5Wo3CFuinfuj5BpH7OazZfkp5T0yql5Afv6HH9/y11bJ4kHZ
+LOuN2osce0OsknGj9wFt7VQ+NoPMdDh5xR5qVA45KXaAGvOEeKnQ3v+IaxRxiLEr
+wzXVjbbQ9ufdxp/gYwaQje9++jeC47Ksc7iiA0FFl67TRkJquaD0XXl35XgwKbG0
+KP576/43vD0ojeaJFfDa+rZfjOEAhF/B+KDcqq2Bgm1VFcLq2WUY2DZcUji3BiPT
+taWwifBcJgmmvWbI46dcTh1AfPnAHEvq8AEQUnEL+ZuBVeYMCUnoeBhPYT4kzsS0
+34mcB/+MxtVwmENM5f71PtzWWiNV6o6r2jLIepE3zCcIim2+vv3uIkvlVtreBc7f
+2lL4nIkg79fZVsFG2Mz/Jq4Stnw0dSpIz0CArAm73aTpLqGEarbf/Oko96sNp9OZ
+gon0WBaJaEbwiTrjy5L8BRwJMapsB5YcWnJbXyfL8IT551nR+TYT67RG5rc59Inh
+jkAjHB3dAgF0xns0s9wsVBk9NsHim+GmTI9QCQM5MFtV9aVJRdmOIDZWY0Xb3C/Y
+lNoau1fErFFcPhFZ1jpJj5kCAwEAAQ==
+-----END PUBLIC KEY-----
+```
+
+```
+-----BEGIN PRIVATE KEY-----
+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
+goHztrHKEfdakTIGpcrDUOXzgqiVDw==
+-----END PRIVATE KEY-----
+```
 
 #### 3.3.2 Encryption (System A)
 
