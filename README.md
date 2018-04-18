@@ -175,7 +175,7 @@ Authenticity refers to the characteristics of the authenticity, verifiability an
 
 ### 3.1 Bash
 
-#### 3.1.1 Preparations
+#### 3.1.1 Preparations (public and private key)
 
 ##### 3.1.1.1 Private key "private.pem" (System B)
 
