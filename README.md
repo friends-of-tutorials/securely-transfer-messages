@@ -165,10 +165,10 @@ Authenticity refers to the characteristics of the authenticity, verifiability an
     * [Encrypted key exchange](https://en.wikipedia.org/wiki/Encrypted_key_exchange) (EKE)
     * [Password-authenticated key agreement](https://en.wikipedia.org/wiki/Password-authenticated_key_agreement) (PAKE)
     * [Simple Password Exponential Key Exchange](https://en.wikipedia.org/wiki/SPEKE) (SPEKE)
-  * [Diffie–Hellman key exchange](https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange)
-  * [Elliptic-curve Diffie–Hellman](https://en.wikipedia.org/wiki/Elliptic-curve_Diffie%E2%80%93Hellman)
-  * [Password Authenticated Key Exchange by Juggling](https://en.wikipedia.org/wiki/Password_Authenticated_Key_Exchange_by_Juggling)
-  * [Secure Remote Password protocol](https://en.wikipedia.org/wiki/Secure_Remote_Password_protocol)
+  * [Diffie–Hellman key exchange](https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange) (DH)
+  * [Elliptic-curve Diffie–Hellman](https://en.wikipedia.org/wiki/Elliptic-curve_Diffie%E2%80%93Hellman) (ECDH)
+  * [Password Authenticated Key Exchange by Juggling](https://en.wikipedia.org/wiki/Password_Authenticated_Key_Exchange_by_Juggling) (J-PAKE)
+  * [Secure Remote Password protocol](https://en.wikipedia.org/wiki/Secure_Remote_Password_protocol) (SRP)
 
 ## 3. Preparations
 
