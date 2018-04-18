@@ -337,7 +337,7 @@ user$ echo -en "$rsaCiphertext\n\n$aesCiphertext" | base64 > cipher.txt
 
 #### 4.1.2 Decryption (System B)
 
-##### 4.1.2.1 Get the asymmetrical and the symmetrical part
+##### 4.1.2.1 Extract the asymmetrical and the symmetrical part
 
 ```
 user$ cat cipher.txt | base64 --decode
