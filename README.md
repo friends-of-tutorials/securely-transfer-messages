@@ -74,7 +74,20 @@ Authenticity refers to the characteristics of the authenticity, verifiability an
 
 [![No cryptography](/images/symmetric_cryptography.png)](/images/symmetric_cryptography.png)
 
-##### 2.2.1.1 Implementations
+##### 2.2.1.1 Advantages
+
+* simple key management, it only needs one secret key for ciphering and deciphering
+* a symmetrical cryptosystem is faster than an asymmetrical one
+* only a system which possesses the secret key are able to decrypt a message
+* the encryption itself is fully compatible with the confidentiality provisions of information security
+
+##### 2.2.1.2 Disadvantage
+
+* symmetrical cryptosystems have a problem with key transportation
+* the key must be transmitted via a secure route
+* if someone gains access to the secret key, he or she can decrypt the sent message
+
+##### 2.2.1.3 Implementations
 
 * [DES (Data Encryption Standard)](https://en.wikipedia.org/wiki/Data_Encryption_Standard)
 * [Triple-DES (also TDES, 3DES or DESede)](https://en.wikipedia.org/wiki/Triple_DES)
@@ -88,24 +101,20 @@ Authenticity refers to the characteristics of the authenticity, verifiability an
 * [RC2](https://en.wikipedia.org/wiki/RC2), [RC4](https://en.wikipedia.org/wiki/RC4), [RC5](https://en.wikipedia.org/wiki/RC5), [RC6](https://en.wikipedia.org/wiki/RC6)
 * etc.
 
-##### 2.2.1.2 Advantages
-
-* simple key management, it only needs one secret key for ciphering and deciphering
-* a symmetrical cryptosystem is faster than an asymmetrical one
-* only a system which possesses the secret key are able to decrypt a message
-* the encryption itself is fully compatible with the confidentiality provisions of information security
-
-##### 2.2.1.3 Disadvantage
-
-* symmetrical cryptosystems have a problem with key transportation
-* the key must be transmitted via a secure route
-* if someone gains access to the secret key, he or she can decrypt the sent message
-
 #### 2.2.2 Asymmetrical cryptography
 
 [![No cryptography](/images/asymmetric_cryptography.png)](/images/asymmetric_cryptography.png)
 
-##### 2.2.2.1 Implementations
+
+##### 2.2.2.1 Advantages
+
+TODO...
+
+##### 2.2.2.2 Disadvantage
+
+TODO...
+
+##### 2.2.2.3 Implementations
 
 * [RSA](https://en.wikipedia.org/wiki/RSA_(cryptosystem))
 * [Merkle-Hellman](https://en.wikipedia.org/wiki/Merkle%E2%80%93Hellman_knapsack_cryptosystem)
@@ -117,15 +126,6 @@ Authenticity refers to the characteristics of the authenticity, verifiability an
 * [DSA](https://en.wikipedia.org/wiki/Digital_Signature_Algorithm)
 * [LUC Cryptography](https://www.cryptopp.com/wiki/LUC_Cryptography)
 
-
-##### 2.2.2.2 Advantages
-
-TODO...
-
-##### 2.2.2.3 Disadvantage
-
-TODO...
-
 #### 2.2.3 Hybrid cryptography
 
 **Version 1 - The receiving system generates the symmetric key**
@@ -136,15 +136,15 @@ TODO...
 
 [![No cryptography](/images/hybrid_cryptography_2.png)](/images/hybrid_cryptography_2.png)
 
-##### 2.2.3.1 Implementations
+##### 2.2.3.1 Advantages
 
 TODO...
 
-##### 2.2.3.2 Advantages
+##### 2.2.3.2 Disadvantage
 
 TODO...
 
-##### 2.2.3.3 Disadvantage
+##### 2.2.3.3 Implementations
 
 TODO...
 
