@@ -450,7 +450,7 @@ TODO...
 
 #### 3.3.1 Preparations (public and private key)
 
-##### 3.3.1.1 Private key "private.pem" (System A and B)
+##### 3.3.1.1 Private and public key (System A and B)
 
 ```
 <?php
