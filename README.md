@@ -158,6 +158,7 @@ TODO...
   * [Diffie–Hellman key exchange](https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange)
   * [Elliptic-curve Diffie–Hellman](https://en.wikipedia.org/wiki/Elliptic-curve_Diffie%E2%80%93Hellman)
   * [Password Authenticated Key Exchange by Juggling](https://en.wikipedia.org/wiki/Password_Authenticated_Key_Exchange_by_Juggling)
+  * [Secure Remote Password protocol](https://en.wikipedia.org/wiki/Secure_Remote_Password_protocol)
 
 ## 3. Preparations
 
