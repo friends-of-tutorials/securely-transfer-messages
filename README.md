@@ -18,6 +18,7 @@ This is a tutorial to securely transfer messages from system A to system B with 
     * [2.2.3 Hybrid cryptography](#user-content-223-hybrid-cryptography)
 * [3. Implementations](#user-content-4-implementations)
   * [3.1 Bash](#user-content-31-bash)
+    * [3.1.1 Preparations](#user-content-311-preparations)
   * [3.2 Javascript](#user-content-32-javascript)
   * [3.3 PHP](#user-content-33-php)
   
