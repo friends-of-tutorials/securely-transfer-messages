@@ -16,12 +16,10 @@ This is a tutorial to securely transfer messages from system A to system B with 
     * [2.2.1 Symmetric cryptography](#user-content-221-symmetric-cryptography)
     * [2.2.2 Asymmetric cryptography](#user-content-222-asymmetric-cryptography)
     * [2.2.3 Hybrid cryptography](#user-content-223-hybrid-cryptography)
-* [3. Preparations](#user-content-3-preparations)
-  * [3.1 Building public and private key (asymmetric and hybrid cryptopgraphy)](#user-content-31-building-public-and-private-key-asymmetric-and-hybrid-cryptopgraphy)
-* [4. Implementations](#user-content-4-implementations)
-  * [4.1 Bash](#user-content-41-bash)
-  * [4.2 Javascript](#user-content-42-javascript)
-  * [4.3 PHP](#user-content-43-php)
+* [3. Implementations](#user-content-4-implementations)
+  * [3.1 Bash](#user-content-31-bash)
+  * [3.2 Javascript](#user-content-32-javascript)
+  * [3.3 PHP](#user-content-33-php)
   
 ## 1. Rules of information security
 
@@ -170,11 +168,13 @@ Authenticity refers to the characteristics of the authenticity, verifiability an
   * [Password Authenticated Key Exchange by Juggling](https://en.wikipedia.org/wiki/Password_Authenticated_Key_Exchange_by_Juggling) (J-PAKE)
   * [Secure Remote Password protocol](https://en.wikipedia.org/wiki/Secure_Remote_Password_protocol) (SRP)
 
-## 3. Preparations
+## 3. Implementations
 
-### 3.1 Building public and private key (asymmetric and hybrid cryptopgraphy)
+### 3.1 Bash
 
-#### 3.1.1 Private key "private.pem" (System B)
+#### 3.1.1 Preparations
+
+##### 3.1.1.1 Private key "private.pem" (System B)
 
 ```
 user$ openssl genpkey -algorithm RSA -out private.pem -pkeyopt rsa_keygen_bits:2048
@@ -212,7 +212,7 @@ SyuRojfsMfUIFOQJ6NCW2w==
 -----END PRIVATE KEY-----
 ```
 
-#### 3.1.2 Public key "public.pem" (System A)
+#### 3.1.1.2 Public key "public.pem" (System A)
 
 ```
 user$ openssl rsa -pubout -in private.pem -out public.pem
@@ -231,13 +231,9 @@ MQIDAQAB
 -----END PUBLIC KEY-----
 ```
 
-## 4. Implementations
+#### 3.1.2 Encryption (System A)
 
-### 4.1 Bash
-
-#### 4.1.1 Encryption (System A)
-
-##### 4.1.1.1 Generate the iv and key from given passphrase
+##### 3.1.2.1 Generate the iv and key from given passphrase
 
 The passphrase is "MySecretPassphrase". In some cases you will need the passphrase. In some cases the equivalent iv and key:
 
@@ -285,7 +281,7 @@ bz0UTwN7NVfZcG5ohyXOLEiS6eEkGIHeqAV7VcJf51wxNMHg0aH1ENB/3Zs7zUY6lQJtUIIDZYiF
 EftyO2lwVc88+ql2+GVFRkxxOlSdQ46FTeryag==
 ```
 
-##### 4.1.1.2 Encrypt the message
+##### 3.1.2.2 Encrypt the message
 
 For example with AES encryption and the passphrase:
 
@@ -302,7 +298,7 @@ The result:
 4FFWdfqQzuMd/JP3fvpriRC5oajS8ENpCD3ZOxDVBZmWAFPhIkb4iVbWYnWPDNCw
 ```
 
-##### 4.1.1.3 Combine the RSA ciphertext and AES ciphertext
+##### 3.1.2.3 Combine the RSA ciphertext and AES ciphertext
 
 ```
 user$ echo -e "$rsaCiphertext\n\n$aesCiphertext"
@@ -345,9 +341,9 @@ Write the complete ciphertext to file "cipher.txt":
 user$ echo -en "$rsaCiphertext\n\n$aesCiphertext" | base64 > cipher.txt
 ```
 
-#### 4.1.2 Decryption (System B)
+#### 3.1.3 Decryption (System B)
 
-##### 4.1.2.1 Extract the asymmetrical and the symmetrical part
+##### 3.1.3.1 Extract the asymmetrical and the symmetrical part
 
 ```
 user$ cat cipher.txt | base64 --decode
@@ -390,7 +386,7 @@ user$ cat cipher.txt | base64 --decode | sed '1,/^$/d'
 4FFWdfqQzuMd/JP3fvpriRC5oajS8ENpCD3ZOxDVBZmWAFPhIkb4iVbWYnWPDNCw
 ```
 
-##### 4.1.2.2 Decrypt the key and iv (from asymmetrical part)
+##### 3.1.3.2 Decrypt the key and iv (from asymmetrical part)
 
 ```
 user$ cat cipher.txt | base64 --decode | sed '/^$/q' | base64 --decode | openssl rsautl -decrypt -ssl -inkey private.pem
@@ -400,7 +396,7 @@ user$ cat cipher.txt | base64 --decode | sed '/^$/q' | base64 --decode | openssl
 71EB7C9E4F6E4B4A1341E4AD519FB22D0BD4A0AF0B8CB77FEA0C6E1F82870B0C:10A8C339AEC170CCBA8D3816785F67F6
 ```
 
-##### 4.1.2.3 Decrypt the ciphertext (from symmetrical part)
+##### 3.1.3.3 Decrypt the ciphertext (from symmetrical part)
 
 With the iv and the related key:
 
@@ -426,27 +422,27 @@ Hello world! :)
 This is my secret text.
 ```
 
-### 4.2 Javascript
+### 3.2 Javascript
 
 TODO...
 
-#### 4.2.1 Encryption (System A)
+#### 3.2.1 Encryption (System A)
 
 TODO...
 
-#### 4.2.2 Decryption (System B)
+#### 3.2.2 Decryption (System B)
 
 TODO...
 
-### 4.3 PHP
+### 3.3 PHP
 
 TODO...
 
-#### 4.3.1 Encryption (System A)
+#### 3.3.1 Encryption (System A)
 
 TODO...
 
-#### 4.3.2 Decryption (System B)
+#### 3.3.2 Decryption (System B)
 
 TODO...
 
