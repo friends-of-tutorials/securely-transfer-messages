@@ -20,6 +20,7 @@ This is a tutorial to securely transfer messages from system A to system B with 
   * [3.1 Bash](#user-content-31-bash)
     * [3.1.1 Preparations](#user-content-311-preparations)
     * [3.1.2 Encryption (System A)](#user-content-312-encryption-system-a)
+    * [3.1.3 Decryption (System B)](#user-content-313-decryption-system-b)
   * [3.2 Javascript](#user-content-32-javascript)
   * [3.3 PHP](#user-content-33-php)
   
