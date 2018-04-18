@@ -111,6 +111,7 @@ Authenticity refers to the characteristics of the authenticity, verifiability an
 
 * high security
 * it solves the key exchange problem entirely (different keys when encrypting and decrypting)
+* the knowledge of the public key of the recipient is enough to encrypt
 * less complexity in keeping the keys secret
 * [digital signatures](https://en.wikipedia.org/wiki/Digital_signature) - possibility of authentication (authenticity)
 
@@ -143,11 +144,15 @@ Authenticity refers to the characteristics of the authenticity, verifiability an
 
 ##### 2.2.3.1 Advantages
 
-TODO...
+* it combines the advantages of symmetric and asymmetric encryption
+  * fast
+  * no key exchange problem
+  * suitable for encrypting large amounts of data
 
 ##### 2.2.3.2 Disadvantage
 
-TODO...
+* more complex implementation on both the encryption system (system A) and the decryption system (system B)
+* both systems need to comprehend the used encryption methods
 
 ##### 2.2.3.3 Implementations
 
