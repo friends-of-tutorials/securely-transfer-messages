@@ -78,6 +78,7 @@ Authenticity refers to the characteristics of the authenticity, verifiability an
 
 * simple key management, it only needs one secret key for ciphering and deciphering
 * a symmetrical cryptosystem is faster than an asymmetrical one
+* suitable for encrypting large amounts of data
 * only a system which possesses the secret key are able to decrypt a message
 * the encryption itself is fully compatible with the confidentiality provisions of information security
 
@@ -96,7 +97,7 @@ Authenticity refers to the characteristics of the authenticity, verifiability an
 * [Twofish](https://en.wikipedia.org/wiki/Twofish)
 * [Serpent](https://en.wikipedia.org/wiki/Serpent_(cipher))
 * [Blowfish](https://en.wikipedia.org/wiki/Blowfish_(cipher))
-* [Кузнечик](https://en.wikipedia.org/wiki/Kuznyechik)
+* [Кузнечик](https://en.wikipedia.org/wiki/Kuznyechik) (Kuznyechik)
 * [CAST-128](https://en.wikipedia.org/wiki/CAST-128), [CAST-256](https://en.wikipedia.org/wiki/CAST-256)
 * [RC2](https://en.wikipedia.org/wiki/RC2), [RC4](https://en.wikipedia.org/wiki/RC4), [RC5](https://en.wikipedia.org/wiki/RC5), [RC6](https://en.wikipedia.org/wiki/RC6)
 * etc.
@@ -108,11 +109,15 @@ Authenticity refers to the characteristics of the authenticity, verifiability an
 
 ##### 2.2.2.1 Advantages
 
-TODO...
+* high security
+* it solves the key exchange problem entirely (different keys when encrypting and decrypting)
+* less complexity in keeping the keys secret
+* [digital signatures](https://en.wikipedia.org/wiki/Digital_signature) - possibility of authentication (authenticity)
 
 ##### 2.2.2.2 Disadvantage
 
-TODO...
+* asymmetrical cryptography works slow (up to 10.000 times slower than symmetrical methods)
+* not suitable for encrypting large amounts of data (the maximum message length is determined by the size of key length)
 
 ##### 2.2.2.3 Implementations
 
