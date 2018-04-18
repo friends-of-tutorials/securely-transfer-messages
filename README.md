@@ -452,7 +452,7 @@ TODO...
 
 ##### 3.3.1.1 Private and public key (System A and B)
 
-```
+```php
 <?php
   
 /* Configuration settings for the key */
