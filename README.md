@@ -146,7 +146,13 @@ TODO...
 
 ##### 2.2.3.3 Implementations
 
-TODO...
+* symmetric implementations
+  * see symmetric cryptography
+* asymmetric implementations
+  * see asymmetric cryptography
+* key exchange implementations
+  * [Diffie–Hellman key exchange](https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange)
+  * [Elliptic-curve Diffie–Hellman](https://en.wikipedia.org/wiki/Elliptic-curve_Diffie%E2%80%93Hellman)
 
 ## 3. Preparations
 
