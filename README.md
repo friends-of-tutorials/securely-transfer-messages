@@ -150,9 +150,14 @@ TODO...
   * see symmetric cryptography
 * asymmetric implementations
   * see asymmetric cryptography
-* key exchange implementations
+* [key exchange](https://en.wikipedia.org/wiki/Key_exchange) implementations
+  * Basics
+    * [Encrypted key exchange](https://en.wikipedia.org/wiki/Encrypted_key_exchange)
+    * [Password-authenticated key agreement](https://en.wikipedia.org/wiki/Password-authenticated_key_agreement)
+    * [Simple Password Exponential Key Exchange](https://en.wikipedia.org/wiki/SPEKE)
   * [Diffie–Hellman key exchange](https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange)
   * [Elliptic-curve Diffie–Hellman](https://en.wikipedia.org/wiki/Elliptic-curve_Diffie%E2%80%93Hellman)
+  * [Password Authenticated Key Exchange by Juggling](https://en.wikipedia.org/wiki/Password_Authenticated_Key_Exchange_by_Juggling)
 
 ## 3. Preparations
 
