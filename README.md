@@ -524,14 +524,18 @@ aF/4UXNChWkvF87X9jZt7zC9zw==
 
 ```php
 $data = "Hello world! :)\n\nThis is my secret text.";
-$key = '71EB7C9E4F6E4B4A1341E4AD519FB22D0BD4A0AF0B8CB77FEA0C6E1F82870B0C';
-$iv = '10A8C339AEC170CCBA8D3816785F67F6';
+$key  = '71EB7C9E4F6E4B4A1341E4AD519FB22D0BD4A0AF0B8CB77FEA0C6E1F82870B0C';
+$iv   = '10A8C339AEC170CCBA8D3816785F67F6';
 
-$cipher = 'aes-256-cbc';
+$cipher  = 'aes-256-cbc';
+$options = OPENSSL_RAW_DATA;
 
-$ciphertext = openssl_encrypt($data, $cipher, hex2bin($key), 0, hex2bin($iv));
+$keyBin = hex2bin($key);
+$ivBin  = hex2bin($iv);
 
-echo $ciphertext;
+$ciphertext = openssl_encrypt($data, $cipher, $keyBin, $options, $ivBin);
+
+echo base64_encode($ciphertext);
 ```
 
 It returns:
