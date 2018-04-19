@@ -523,19 +523,21 @@ aF/4UXNChWkvF87X9jZt7zC9zw==
 #### 3.3.2 Encryption (System A)
 
 ```php
-$data = "Hello world! :)\n\nThis is my secret text.";
-$key  = '71EB7C9E4F6E4B4A1341E4AD519FB22D0BD4A0AF0B8CB77FEA0C6E1F82870B0C';
-$iv   = '10A8C339AEC170CCBA8D3816785F67F6';
-
+$message = "Hello world! :)\n\nThis is my secret text.";
+$key     = '71EB7C9E4F6E4B4A1341E4AD519FB22D0BD4A0AF0B8CB77FEA0C6E1F82870B0C';
+$iv      = '10A8C339AEC170CCBA8D3816785F67F6';
 $cipher  = 'aes-256-cbc';
 $options = OPENSSL_RAW_DATA;
 
+/* calculate the bin version of iv and key */
 $keyBin = hex2bin($key);
 $ivBin  = hex2bin($iv);
 
-$ciphertext = openssl_encrypt($data, $cipher, $keyBin, $options, $ivBin);
+/* encrypt the message */
+$messageEncrypted = openssl_encrypt($message, $cipher, $keyBin, $options, $ivBin);
 
-echo base64_encode($ciphertext);
+/* print the encrypted message */
+echo base64_encode($messageEncrypted)."\n";                                                                                   
 ```
 
 It returns:
@@ -546,7 +548,21 @@ It returns:
 
 #### 3.3.3 Decryption (System B)
 
-TODO...
+```
+/* devrypt the message */
+$message = openssl_decrypt($messageEncrypted, $cipher, $keyBin, $options, $ivBin);
+
+/* print the decrypted message */
+echo $message."\n";
+```
+
+It returns the expected message:
+
+```
+Hello world! :)
+
+This is my secret text.
+```
 
 ## A. Authors
 
