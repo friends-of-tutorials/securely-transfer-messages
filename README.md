@@ -548,8 +548,8 @@ It returns:
 
 #### 3.3.3 Decryption (System B)
 
-```
-/* devrypt the message */
+```php
+/* decrypt the message */
 $message = openssl_decrypt($messageEncrypted, $cipher, $keyBin, $options, $ivBin);
 
 /* print the decrypted message */
