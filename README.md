@@ -268,6 +268,8 @@ key=71EB7C9E4F6E4B4A1341E4AD519FB22D0BD4A0AF0B8CB77FEA0C6E1F82870B0C
 iv=10A8C339AEC170CCBA8D3816785F67F6
 ```
 
+I recommend to generate the key and the iv automatically. To better understand the examples below, we use a fixed key and iv.
+
 Encrypt the key and iv or your secret passphrase, depending on what your decryption library supports. Below is the example with a key and iv. The combination will encrypted with the public key "public.pem":
 
 ```
