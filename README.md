@@ -187,8 +187,8 @@ Authenticity refers to the characteristics of the authenticity, verifiability an
 ##### 3.1.1.1 Private key "private.pem" (System B)
 
 ```console
-user@localhost:~$ openssl genpkey -algorithm RSA -out private.pem -pkeyopt rsa_keygen_bits:2048
-user@localhost:~$ cat private.pem
+user@sh$ openssl genpkey -algorithm RSA -out private.pem -pkeyopt rsa_keygen_bits:2048
+user@sh$ cat private.pem
 ```
 
 ```
@@ -224,9 +224,9 @@ SyuRojfsMfUIFOQJ6NCW2w==
 
 #### 3.1.1.2 Public key "public.pem" (System A)
 
-```
-user$ openssl rsa -pubout -in private.pem -out public.pem
-user$ cat public.pem
+```console
+user@sh$ openssl rsa -pubout -in private.pem -out public.pem
+user@sh$ cat public.pem
 ```
 
 ```
@@ -247,8 +247,8 @@ MQIDAQAB
 
 The passphrase is "MySecretPassphrase". In some cases you will need the passphrase. In some cases the equivalent iv and key:
 
-```
-user$ openssl enc -nosalt -aes-256-cbc -nosalt -pass pass:MySecretPassphrase -P | \
+```console
+user@sh$ openssl enc -nosalt -aes-256-cbc -nosalt -pass pass:MySecretPassphrase -P | \
 sed 's/key=\([0-9a-z]\+\)/\1:/gi' | \
 sed 's/iv =\([0-9a-z]\+\)/\1/gi' | \
 tr --delete '\n'
@@ -272,8 +272,8 @@ I recommend to generate the key and the iv automatically. To better understand t
 
 Encrypt the key and iv or your secret passphrase, depending on what your decryption library supports. Below is the example with a key and iv. The combination will encrypted with the public key "public.pem":
 
-```
-user$ $ rsaCiphertext=$(\
+```console
+user@sh$ rsaCiphertext=$(\
     openssl enc -nosalt -aes-256-cbc -nosalt -pass pass:MySecretPassphrase -P | \
     sed 's/key=\([0-9a-z]\+\)/\1:/gi' | \
     sed 's/iv =\([0-9a-z]\+\)/\1/gi' | \
@@ -297,8 +297,8 @@ EftyO2lwVc88+ql2+GVFRkxxOlSdQ46FTeryag==
 
 For example with AES encryption and the passphrase:
 
-```
-user$ aesCiphertext=$(\
+```console
+user@sh$ aesCiphertext=$(\
     echo -en "Hello world! :)\n\nThis is my secret text." | \
     openssl enc -base64 -e -aes-256-cbc -nosalt -pass pass:MySecretPassphrase \
 ) && echo -e "$aesCiphertext"
@@ -312,8 +312,8 @@ The result:
 
 ##### 3.1.2.3 Combine the RSA ciphertext and AES ciphertext
 
-```
-user$ echo -e "$rsaCiphertext\n\n$aesCiphertext"
+```console
+user@sh$ echo -e "$rsaCiphertext\n\n$aesCiphertext"
 ```
 
 With the result:
@@ -330,8 +330,8 @@ EftyO2lwVc88+ql2+GVFRkxxOlSdQ46FTeryag==
 
 Encode the result with base64:
 
-```
-user$ echo -en "$rsaCiphertext\n\n$aesCiphertext" | base64
+```console
+user@sh$ echo -en "$rsaCiphertext\n\n$aesCiphertext" | base64
 ```
 
 The following combined ciphertext is only decryptable with the private key (private.pem) and can be safely sent over any data network:
@@ -349,16 +349,16 @@ a2I0aVZiV1luV1BETkN3
 
 Write the complete ciphertext to file "cipher.txt":
 
-```
-user$ echo -en "$rsaCiphertext\n\n$aesCiphertext" | base64 > cipher.txt
+```console
+user@sh$ echo -en "$rsaCiphertext\n\n$aesCiphertext" | base64 > cipher.txt
 ```
 
 #### 3.1.3 Decryption (System B)
 
 ##### 3.1.3.1 Extract the asymmetrical and the symmetrical part
 
-```
-user$ cat cipher.txt | base64 --decode
+```console
+user@sh$ cat cipher.txt | base64 --decode
 ```
 
 The expected result is:
@@ -376,8 +376,8 @@ EftyO2lwVc88+ql2+GVFRkxxOlSdQ46FTeryag==
 
 Now. Split the result. The asymmetrical part:
 
-```
-user$ cat cipher.txt | base64 --decode | sed '/^$/q'
+```console
+user@sh$ cat cipher.txt | base64 --decode | sed '/^$/q'
 ```
 
 ```
@@ -390,8 +390,8 @@ EftyO2lwVc88+ql2+GVFRkxxOlSdQ46FTeryag==
 
 The symmetrical part:
 
-```
-user$ cat cipher.txt | base64 --decode | sed '1,/^$/d'
+```console
+user@sh$ cat cipher.txt | base64 --decode | sed '1,/^$/d'
 ```
 
 ```
@@ -400,8 +400,8 @@ user$ cat cipher.txt | base64 --decode | sed '1,/^$/d'
 
 ##### 3.1.3.2 Decrypt the key and iv (from asymmetrical part)
 
-```
-user$ cat cipher.txt | base64 --decode | sed '/^$/q' | base64 --decode | openssl rsautl -decrypt -ssl -inkey private.pem
+```console
+user@sh$ cat cipher.txt | base64 --decode | sed '/^$/q' | base64 --decode | openssl rsautl -decrypt -ssl -inkey private.pem
 ```
 
 ```
@@ -412,8 +412,8 @@ user$ cat cipher.txt | base64 --decode | sed '/^$/q' | base64 --decode | openssl
 
 With the iv and the related key:
 
-```
-$ echo $(cat cipher.txt | base64 --decode | sed '1,/^$/d') | openssl enc -d -base64 -aes-256-cbc -nosalt -K 71EB7C9E4F6E4B4A1341E4AD519FB22D0BD4A0AF0B8CB77FEA0C6E1F82870B0C -iv 10A8C339AEC170CCBA8D3816785F67F6
+```console
+user@sh$ echo $(cat cipher.txt | base64 --decode | sed '1,/^$/d') | openssl enc -d -base64 -aes-256-cbc -nosalt -K 71EB7C9E4F6E4B4A1341E4AD519FB22D0BD4A0AF0B8CB77FEA0C6E1F82870B0C -iv 10A8C339AEC170CCBA8D3816785F67F6
 ```
 
 ```
@@ -424,8 +424,8 @@ This is my secret text.
 
 Or with the passphrase above (depending on what is currently available):
 
-```
-user$ echo $(cat cipher.txt | base64 --decode | sed '1,/^$/d') | openssl enc -d -base64 -aes-256-cbc -nosalt -pass pass:MySecretPassphrase
+```console
+user@sh$ echo $(cat cipher.txt | base64 --decode | sed '1,/^$/d') | openssl enc -d -base64 -aes-256-cbc -nosalt -pass pass:MySecretPassphrase
 ```
 
 ```
