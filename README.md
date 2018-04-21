@@ -453,12 +453,16 @@ This is my secret text.
 
 The symmetric and asymmetric encryptions are not natively supported by Javascript. In the following examples I will use this library for asymmetric encription: https://github.com/travist/jsencrypt Fell free to use different ones.
 
-#### 3.2.1 Preparations (public and private key)
+#### 3.2.1 Preparations
 
 ```javascript
 var crypt = new JSEncrypt();
+```
+
+##### 3.2.1.1 Private key
+
+```javascript
 console.log(crypt.getPrivateKey());
-console.log(crypt.getPublicKey());
 ```
 
 ```
@@ -477,6 +481,12 @@ mwEc8zU98YIOwsMF812gom90vL/+UIOEqDX33cGvctdoeh4kO01FJAVZtIJhzNJu
 IvO5muKtpmSE9d75AkALqO50vN3lYbuRaSB5Eiy1C8jRpJOKxIh8eZg+TsgET6NT
 jSYBnUytkDWOECaEe1RmMqtGgtqosz87A2PrZBCE
 -----END RSA PRIVATE KEY-----
+```
+
+##### 3.2.1.2 Public key
+
+```javascript
+console.log(crypt.getPublicKey());
 ```
 
 ```
