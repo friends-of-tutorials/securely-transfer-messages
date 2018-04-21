@@ -63,9 +63,9 @@ Authenticity refers to the characteristics of the authenticity, verifiability an
 
 #### 2.1.1 Unciphered transfer
 
-The message is sent unencrypted from system 1 to system 2. This message can be read by anyone (confidentiality). The data can be changed unnoticed (integrity). The authenticity of the received message can not be confirmed (authenticity).
-
 ##### 2.2.1.1 Explanation
+
+The message is sent unencrypted from system 1 to system 2. This message can be read by anyone (confidentiality). The data can be changed unnoticed (integrity). The authenticity of the received message can not be confirmed (authenticity).
 
 [![No cryptography](/images/no_cryptography.png)](/images/no_cryptography.png)
 
