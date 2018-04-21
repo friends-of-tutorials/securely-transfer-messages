@@ -659,7 +659,7 @@ This is my secret text.
 ### 4.1 Check the private key
 
 ```console
-user@sh$  openssl rsa -in id_rsa -check
+user@sh$ openssl rsa -in private.pem -check
 ```
 
 ```
