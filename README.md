@@ -524,33 +524,70 @@ aF/4UXNChWkvF87X9jZt7zC9zw==
 
 #### 3.3.2 Encryption (System A)
 
+##### 3.3.2.1 Encrypt the iv and key
+
 ```php
+$key       = '71EB7C9E4F6E4B4A1341E4AD519FB22D0BD4A0AF0B8CB77FEA0C6E1F82870B0C';
+$iv        = '10A8C339AEC170CCBA8D3816785F67F6';
+$publicKey = file_get_contents('id_rsa.pub');
+
+/* encrypt the key and iv */
+$keyIv = sprintf('%s:%s', $key, $iv);
+
+/* encrypt using the public key */
+openssl_public_encrypt($keyIv, $encryptedKeyIvBin, $publicKey);
+$encryptedKeyIv = base64_encode($encryptedKeyIvBin);
+
+echo $encryptedKeyIv;                                                                             
+```
+
+As an example, the output below which differs from yours:
+
+```
+K8IcFnmSVo8qtNx3MXgcKHujFqn6QllrJdbYw0ypbY1lCc7CgGPNQmcJWQX9dI6Q4GvxXs9LCDqggnDyCPyEFJq8T5gJgYbqp7QvplAHShBJOeg/iScTirWKwz5dGEXvirws0XOzv9wKxKRlQq1/jv1G4w5Uc+O4R+cnIWmdakBxNIILi0gN+Fh/xBb0nRpdmGRP9aeJq+w4yJwzkgd6V2w8tV0NLzR2IkHGqYcyQg+cCXD6m0ul3nzSWAqBy/b7BJK0HQZMZ9UniNJYp/29wwPPjc4gx2/2kPmVWMeKE4i1oxGAOr5w0V2gmyGDWGVzzXneqPlDqGBwC9rApqzBiw==
+```
+
+##### 3.3.2.2 Encrypt the message
+
+```php
+/* the message */
 $message = <<<MESSAGE
 Hello world! :)
 
 This is my secret text.
 MESSAGE;
-$key     = '71EB7C9E4F6E4B4A1341E4AD519FB22D0BD4A0AF0B8CB77FEA0C6E1F82870B0C';
-$iv      = '10A8C339AEC170CCBA8D3816785F67F6';
 $cipher  = 'aes-256-cbc';
 $options = OPENSSL_RAW_DATA;
 
-/* calculate the bin version of iv and key */
-$keyBin = hex2bin($key);
-$ivBin  = hex2bin($iv);
-
 /* encrypt the message */
-$messageEncrypted = openssl_encrypt($message, $cipher, $keyBin, $options, $ivBin);
+$encryptedMessage = base64_encode(openssl_encrypt($message, $cipher, hex2bin($key), $options, hex2bin($iv)));
 
-/* print the encrypted message */
-echo base64_encode($messageEncrypted)."\n";                                                                                   
+echo $encryptedMessage;
 ```
 
-It returns:
+The result:
 
 ```
 4FFWdfqQzuMd/JP3fvpriRC5oajS8ENpCD3ZOxDVBZmWAFPhIkb4iVbWYnWPDNCw
 ```
+
+##### 3.3.2.3 Combine the RSA ciphertext and AES ciphertext
+
+```php
+/* combine the asymmetric and the symmetric part */
+$encrypted = base64_encode($encryptedKeyIv."\n\n".$encryptedMessage);
+
+/* you can easily send the following hybrid $encrypted text over any network */
+echo $encrypted;
+```
+
+With the result:
+
+```
+aXJ3c05rdjUvV2pzbG1Pa2k0dVpYTEpGQ0wvYk5hOHRQQXZCaWgram9YaHRmMUtObEZaMXhndUpFQ0dSZ3R3dVYyK3ZOUkhDYTdtWXRzYmZna3FGcGpmamRJWlNZUlg1aDQwODFDUHIyNEdxbW5BOE1UT2VKR0d2Z2kzOXk5Tk9XWUF0K2lHaU1Pc1JGS3dLQ3EydVdmTDJuMXhkcWFHN1o1b1NZV25NVktFNjZDM0dlQm1ycFdUWEgvZGF1MmJ4YmFlM3paTFNpbXJwNExYSHZSWjhwcXdYL2x2MUx6K2tJZW1pY1FQVUp0RzNqSTV0dGI2azhneldpS3daOU1QakJwcUFmQTBKaGpLK2VRU1Z6Q3lXcnFwRkd6MjMvMUtBaE4xaFFoR2U4MWhEQmpMWTdXM1FndkJTVDdpdUtVK25rRHI2MCt5aGNqRDZmNTlTSDVLa1NRPT0KCjRGRldkZnFRenVNZC9KUDNmdnByaVJDNW9halM4RU5wQ0QzWk94RFZCWm1XQUZQaElrYjRpVmJXWW5XUEROQ3c=
+```
+
+This combined ciphertext is only decryptable with the private key (private.pem) and can be safely sent over any data network.
 
 #### 3.3.3 Decryption (System B)
 
