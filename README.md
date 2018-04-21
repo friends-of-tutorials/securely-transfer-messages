@@ -537,7 +537,6 @@ $keyIv = sprintf('%s:%s', $key, $iv);
 /* encrypt using the public key */
 openssl_public_encrypt($keyIv, $encryptedKeyIvBin, $publicKey);
 $encryptedKeyIv = base64_encode($encryptedKeyIvBin);
-
 echo $encryptedKeyIv;                                                                             
 ```
 
@@ -561,7 +560,6 @@ $options = OPENSSL_RAW_DATA;
 
 /* encrypt the message */
 $encryptedMessage = base64_encode(openssl_encrypt($message, $cipher, hex2bin($key), $options, hex2bin($iv)));
-
 echo $encryptedMessage;
 ```
 
@@ -576,8 +574,6 @@ The result:
 ```php
 /* combine the asymmetric and the symmetric part */
 $encrypted = base64_encode($encryptedKeyIv."\n\n".$encryptedMessage);
-
-/* you can easily send the following hybrid $encrypted text over any network */
 echo $encrypted;
 ```
 
@@ -615,7 +611,7 @@ Array
 /* decrypt the data using the private key */
 $privateKey = file_get_contents('id_rsa');
 openssl_private_decrypt(base64_decode($decryptedSections[0]), $decrypted, $privateKey);
-echo $decrypted."\n\n";
+echo $decrypted;
 ```
 
 ```
