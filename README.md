@@ -149,11 +149,11 @@ Authenticity refers to the characteristics of the authenticity, verifiability an
 
 ##### 2.2.3.1 Explanation
 
-**Version 1 - The receiving system generates the symmetric key**
+###### 2.2.3.1.1 Version 1 - The receiving system generates the symmetric key
 
 [![No cryptography](/images/hybrid_cryptography.png)](/images/hybrid_cryptography.png)
 
-**Version 2 - The transmitting system generates the symmetric key**
+###### 2.2.3.1.2 Version 2 - The transmitting system generates the symmetric key
 
 [![No cryptography](/images/hybrid_cryptography_2.png)](/images/hybrid_cryptography_2.png)
 
