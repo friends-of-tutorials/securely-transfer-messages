@@ -153,7 +153,7 @@ Authenticity refers to the characteristics of the authenticity, verifiability an
 
 [![No cryptography](/images/hybrid_cryptography.png)](/images/hybrid_cryptography.png)
 
-**Please note:** This variant is more secure than the following variant 2 because the message recipient expects his own generated key and initial vector to decrypt the message from the system 1.
+**Please note:** This variant is more secure than the following variant 2 because the message recipient expects his own generated key and initial vector pair to decrypt the message from the system 1.
 
 ###### 2.2.3.1.2 Version 2 - The transmitting system generates the symmetric key
 
