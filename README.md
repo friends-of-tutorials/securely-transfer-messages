@@ -86,7 +86,7 @@ The message is sent unencrypted from system A to system B. This message can be r
 
 ##### 2.2.1.1 Explanation
 
-Before the readable message is sent, it is encrypted with the symmetric key. Only recipients with knowledge of this symmetric key can decrypt the message. It is important to ensure that the key exchange is carried out via a secure way to keep the rules of confidentiality, integrity and authenticity. The key exchange is the sore spot here.
+Before the readable message is sent, it is encrypted with the symmetric key. Only recipients with the knowledge of this symmetric key can decrypt the message. It is important to ensure that the key exchange is carried out via a secure way to keep the rules of confidentiality, integrity and authenticity. The key exchange is the sore spot here.
 
 [![No cryptography](/images/symmetric_cryptography.png)](/images/symmetric_cryptography.png)
 
