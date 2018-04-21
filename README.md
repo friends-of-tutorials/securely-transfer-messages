@@ -451,7 +451,7 @@ This is my secret text.
 
 ### 3.2 Javascript
 
-The symmetric and asymmetric encryptions are not natively supported by Javascript. In the following examples I will use this library: http://wwwtyro.github.io/cryptico/ Fell free to use others.
+The symmetric and asymmetric encryptions are not natively supported by Javascript. In the following examples I will use this library: http://wwwtyro.github.io/cryptico/ Fell free to use different ones.
 
 #### 3.2.1 Preparations (public and private key)
 
