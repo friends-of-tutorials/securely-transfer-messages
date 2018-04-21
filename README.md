@@ -456,7 +456,7 @@ The symmetric and asymmetric encryptions are not natively supported by Javascrip
 #### 3.2.1 Preparations
 
 ```javascript
-var crypt = new JSEncrypt();
+var crypt = new JSEncrypt({default_key_size: 2048});
 ```
 
 ##### 3.2.1.1 Private key
