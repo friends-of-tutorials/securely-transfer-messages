@@ -544,7 +544,7 @@ echo $encryptedKeyIv;
 As an example, the output below which differs from yours:
 
 ```
-K8IcFnmSVo8qtNx3MXgcKHujFqn6QllrJdbYw0ypbY1lCc7CgGPNQmcJWQX9dI6Q4GvxXs9LCDqggnDyCPyEFJq8T5gJgYbqp7QvplAHShBJOeg/iScTirWKwz5dGEXvirws0XOzv9wKxKRlQq1/jv1G4w5Uc+O4R+cnIWmdakBxNIILi0gN+Fh/xBb0nRpdmGRP9aeJq+w4yJwzkgd6V2w8tV0NLzR2IkHGqYcyQg+cCXD6m0ul3nzSWAqBy/b7BJK0HQZMZ9UniNJYp/29wwPPjc4gx2/2kPmVWMeKE4i1oxGAOr5w0V2gmyGDWGVzzXneqPlDqGBwC9rApqzBiw==
+irwsNkv5/WjslmOki4uZXLJFCL/bNa8tPAvBih+joXhtf1KNlFZ1xguJECGRgtwuV2+vNRHCa7mYtsbfgkqFpjfjdIZSYRX5h4081CPr24GqmnA8MTOeJGGvgi39y9NOWYAt+iGiMOsRFKwKCq2uWfL2n1xdqaG7Z5oSYWnMVKE66C3GeBmrpWTXH/dau2bxbae3zZLSimrp4LXHvRZ8pqwX/lv1Lz+kIemicQPUJtG3jI5ttb6k8gzWiKwZ9MPjBpqAfA0JhjK+eQSVzCyWrqpFGz23/1KAhN1hQhGe81hDBjLY7W3QgvBST7iuKU+nkDr60+yhcjD6f59SH5KkSQ==
 ```
 
 ##### 3.3.2.2 Encrypt the message
@@ -591,15 +591,47 @@ This combined ciphertext is only decryptable with the private key (private.pem) 
 
 #### 3.3.3 Decryption (System B)
 
-```php
-/* decrypt the message */
-$message = openssl_decrypt($messageEncrypted, $cipher, $keyBin, $options, $ivBin);
+##### 3.3.3.1 Extract the asymmetrical and the symmetrical part
 
-/* print the decrypted message */
-echo $message."\n";
+```php
+/* decrypted the hybrid message: 0 - asymmetric section, 1 - symmetric section */
+$decryptedSections = explode("\n\n", base64_decode($encrypted));
+print_r($decryptedSections);
 ```
 
-It returns the expected message:
+The expected result is:
+
+```php
+Array
+(
+    [0] => irwsNkv5/WjslmOki4uZXLJFCL/bNa8tPAvBih+joXhtf1KNlFZ1xguJECGRgtwuV2+vNRHCa7mYtsbfgkqFpjfjdIZSYRX5h4081CPr24GqmnA8MTOeJGGvgi39y9NOWYAt+iGiMOsRFKwKCq2uWfL2n1xdqaG7Z5oSYWnMVKE66C3GeBmrpWTXH/dau2bxbae3zZLSimrp4LXHvRZ8pqwX/lv1Lz+kIemicQPUJtG3jI5ttb6k8gzWiKwZ9MPjBpqAfA0JhjK+eQSVzCyWrqpFGz23/1KAhN1hQhGe81hDBjLY7W3QgvBST7iuKU+nkDr60+yhcjD6f59SH5KkSQ==
+    [1] => 4FFWdfqQzuMd/JP3fvpriRC5oajS8ENpCD3ZOxDVBZmWAFPhIkb4iVbWYnWPDNCw
+)
+```
+
+##### 3.3.3.2 Decrypt the key and iv (from asymmetrical part)
+
+```php
+/* decrypt the data using the private key */
+$privateKey = file_get_contents('id_rsa');
+openssl_private_decrypt(base64_decode($decryptedSections[0]), $decrypted, $privateKey);
+echo $decrypted."\n\n";
+```
+
+```
+71EB7C9E4F6E4B4A1341E4AD519FB22D0BD4A0AF0B8CB77FEA0C6E1F82870B0C:10A8C339AEC170CCBA8D3816785F67F6
+```
+
+##### 3.3.3.3 Decrypt the ciphertext (from symmetrical part)
+
+With the iv and the related key:
+
+```php
+/* decrypt the message */
+$keyIvSections = explode(':', $decrypted);
+$message = openssl_decrypt(base64_decode($decryptedSections[1]), $cipher, hex2bin($keyIvSections[0]), $options, hex2bin($keyIvSections[1]));
+echo $message;
+```
 
 ```
 Hello world! :)
