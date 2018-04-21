@@ -159,6 +159,8 @@ This variant is more secure than the following variant 2 because the message rec
 
 [![No cryptography](/images/hybrid_cryptography_2.png)](/images/hybrid_cryptography_2.png)
 
+Although this variant is easier to implement, it should be considered that this type of transmission does not regard to the rules of authenticity. It is possible that this message could be intercepted and filled with own content by the attacker. In order to keep the authenticity, I recommend to additionally sign the sent message.
+
 ##### 2.2.3.2 Advantages
 
 * it combines the advantages of symmetric and asymmetric encryption
