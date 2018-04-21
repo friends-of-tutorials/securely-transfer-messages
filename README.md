@@ -63,13 +63,15 @@ Authenticity refers to the characteristics of the authenticity, verifiability an
 
 #### 2.1.1 Unciphered transfer
 
+##### 2.2.1.1 Explanation
+
 [![No cryptography](/images/no_cryptography.png)](/images/no_cryptography.png)
 
-##### 2.1.1.1 Advantages
+##### 2.1.1.2 Advantages
 
 * The transfer is easy to implement (just send the "readable message")
 
-##### 2.1.1.2 Disadvantage
+##### 2.1.1.3 Disadvantage
 
 * The message is catchable and modifiable. This transfer breaks some rules of information security:
   * confidentiality
