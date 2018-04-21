@@ -163,8 +163,8 @@ Authenticity refers to the characteristics of the authenticity, verifiability an
 
 ##### 2.2.3.2 Advantages
 
-* it combines the advantages of symmetric and asymmetric encryption
-  * fast
+* it combines the advantages of symmetric and asymmetric encryption:
+  * this procedure is fast, because it uses the symmetric encryption to encrypt the message
   * no key exchange problem
   * suitable for encrypting large amounts of data
 
