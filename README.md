@@ -654,6 +654,46 @@ Hello world! :)
 This is my secret text.
 ```
 
+## 4. Tools
+
+### 4.1 Check the private key
+
+```console
+user@sh$  openssl rsa -in id_rsa -check
+```
+
+```
+RSA key ok
+writing RSA key
+-----BEGIN RSA PRIVATE KEY-----
+MIIEogIBAAKCAQEAoQcfLo00xicP5oJ8yIclgtVNZBka2ppKfU7MyRJbNpQYIlbJ
+BmiFYa2tNitYGF0TaMA3k2Z5omnBat2MEE5U2+ojWBGockrhZa+0h61CrFGuT9tq
+DehF7HxP2JGyfiQ3k1M8oxBNcOEATO7lqhHVCEfYXtwA7wnpwZRrG1JYcRyBPLkV
+TNWctX0SJ3DpZzrPTJwWEO5vs2+8gxSoa9c40zLWBnNwcCJ0VDMTV2WnTVUFweUX
+prg5b3vNtcridQ1/sS0ZCx2UicxpHdt5MatWN30IaMNaaE4YrFCbGwMjpjZ82qcE
+qFEh67bFtf/3PDbt6kLfGOp1ajSoYgvZoSBRMQIDAQABAoIBAB+w6SAeRj6hPW3e
+THSitG01UY/bqP9Q0kwrD/6akD0DlGRdtB6Av49jwO0iRqo01zcMbWOjDVk7ewdv
+JrumzuihAee5Qe+McSO0GtGA9dg4ExhAVHT8O5a5OHWk5v4QXqeuAAcPlE4c2hRK
+CAUakVSZ3yl8HurshobEkPfFkwZfh8NizhwknUg0+O8dRK7UcFhQoNHL2UCStMPm
+gzZI8nqGpSI+W3gvkCW83uk8r8KNXCuQnSO/Tx6sXwWi4vv5xRGEyuPy5IzAo98R
+K2ZrtxTH1DSHyUTVuTyOD39myCTq0OB8V7KT5mMP5IM2ilmRMZCagwLHgyPprlSq
+1QF/KGkCgYEA1W0augAPafkKjSLFVxbyztlPLI+mnnEATSjOv32M5KW02B/4HRrr
+9kxy3c3idAX3NND1uSPw079DGOcMu7XDp3vW4AS3ivxY+R1bfT67L5rgsjR4NUMB
+sTGdxSgASrCKRpcgMFOzBIS8+iQaPXNQXXyB5WgWpEKWpDaJpRKo7OMCgYEAwSY5
+YTxJNOcx6VQZGNd2vYwrqfucTz8aBattG4cJphTHZYd1nW9FzvHbqnrLEfL9dZ8v
+bLcCkR3AylzG85n/thV2r59FwSdojGP1KGCETnTvrc5u/qDQHUgjxSD5QARDBX28
+kwMhLBIZmaZmOwh2jx9uku6BNgitfjBUFb7umdsCgYB72c+LpmNLfOC5nDbmXgPT
+M1n1ovrusOaa4BZyGxp6yQpT7OFfinLpv91ch5BlAd09whEGOiwTxMbcGaBTAZyj
+gYLlBve36M586aNg39liO78uyrIDPnop6IAEnDznGuFzK1nbkYauFZVQl0i+5j75
+sTnz9V5GPfoLGzbvGw/6PwKBgFxbE6rL8dFLD1GbddisBkoCQUqpVgeKi73UR3qX
+KmTwoJuKlxGtiDq46SluR7WQc+OPN1ULeT28dVgN3s/SfjQptTOqu+btGg+vKCWj
+aQA+5/A6ulYkvP6TZQ84ghY7M3Tnt4iwQWdaTEVtDIsDs/UhuXSmeMBGi/a/0yUG
+w/5rAoGAanuaOkWG/4OW0tav6Zin3NPmq6QDsWjquW+MMc16Q8mQ1LlBncz0g1JS
+xkfSl+SU5Hlqi5DnqWrfbjCNX+fE932K4UOm3hqdxlrZrU5OJInJR5bv61D6kUEG
+eIi743OKU8Q3c/FOY7+v4+VinescMksrkaI37DH1CBTkCejQlts=
+-----END RSA PRIVATE KEY-----
+```
+
 ## A. Authors
 
 * Björn Hempel <bjoern@hempel.li> - _Initial work_ - [https://github.com/bjoern-hempel](https://github.com/bjoern-hempel)
