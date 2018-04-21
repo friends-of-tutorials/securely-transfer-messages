@@ -186,9 +186,9 @@ Authenticity refers to the characteristics of the authenticity, verifiability an
 
 ##### 3.1.1.1 Private key "private.pem" (System B)
 
-```
-user$ openssl genpkey -algorithm RSA -out private.pem -pkeyopt rsa_keygen_bits:2048
-user$ cat private.pem
+```console
+user@localhost:~$ openssl genpkey -algorithm RSA -out private.pem -pkeyopt rsa_keygen_bits:2048
+user@localhost:~$ cat private.pem
 ```
 
 ```
