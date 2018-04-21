@@ -629,6 +629,8 @@ $message = openssl_decrypt(base64_decode($decryptedSections[1]), $cipher, hex2bi
 echo $message;
 ```
 
+Now we get the unciphered and expected message:
+
 ```
 Hello world! :)
 
