@@ -451,11 +451,42 @@ This is my secret text.
 
 ### 3.2 Javascript
 
-The symmetric and asymmetric encryptions are not natively supported by Javascript. In the following examples I will use this library: http://wwwtyro.github.io/cryptico/ Fell free to use different ones.
+The symmetric and asymmetric encryptions are not natively supported by Javascript. In the following examples I will use this library for asymmetric encription: https://github.com/travist/jsencrypt Fell free to use different ones.
 
 #### 3.2.1 Preparations (public and private key)
 
-TODO...
+```javascript
+var crypt = new JSEncrypt();
+console.log(crypt.getPrivateKey());
+console.log(crypt.getPublicKey());
+```
+
+```
+-----BEGIN RSA PRIVATE KEY-----
+MIICWgIBAAKBgGpmloRODdWhP1vsg/3Bb7qlMlbIuxnssHUYCM3OahFzme1EPxiG
+v9fjQZPANdnR3hBBmR6xORybHEheb6gX/dklkHQLBVBdMvyzSYkoHJG+xtql/7LZ
++c6HFbLgNLBEmwhHUS61UxYyMn6R6eXi0kxG02qjrAXKbTiFCK0W0PDdAgMBAAEC
+gYBQYJcr81r4GwumAZHkTBB/SvQwIwtUljzm9/UOo/P0owOQ/ZE8ke6yw/ZyCy2j
+EqtSVHu7d93RAkvnT4/Bx/325sLAXsD1Ksv9uD8BJ4Poq7ofYI0T3aCV9JwrnT/l
+YxFhNM6Ns3QO0fEUKfXTGJoukTTvAO7g30F48D+kAvB3cQJBAKjKBRX1Gibwxx48
+HMLEjhFRSJodKnnoWGDs8cEvcpl5/+/1iDFdVc8mzcz7Kdv30b96OnO43kpfL4Dn
+RoEnz4MCQQChYF1eVepoeOTVIFIn+GS5/+1e/SvC2bNtnBrxQBey6ZQhQEs6i4ek
+QueV6JtQRfmnHvE82Ltq8gylxOxffPAfAkB7mYwF2zkuYMz+1/gbrAF4rvQiXs82
+/CyTtY8G727U8qC3oC3+MCHhEsJLo3SwrpW6yI+7JBorje5kT3eypmtvAkAmTf1b
+mwEc8zU98YIOwsMF812gom90vL/+UIOEqDX33cGvctdoeh4kO01FJAVZtIJhzNJu
+IvO5muKtpmSE9d75AkALqO50vN3lYbuRaSB5Eiy1C8jRpJOKxIh8eZg+TsgET6NT
+jSYBnUytkDWOECaEe1RmMqtGgtqosz87A2PrZBCE
+-----END RSA PRIVATE KEY-----
+```
+
+```
+-----BEGIN PUBLIC KEY-----
+MIGeMA0GCSqGSIb3DQEBAQUAA4GMADCBiAKBgGpmloRODdWhP1vsg/3Bb7qlMlbI
+uxnssHUYCM3OahFzme1EPxiGv9fjQZPANdnR3hBBmR6xORybHEheb6gX/dklkHQL
+BVBdMvyzSYkoHJG+xtql/7LZ+c6HFbLgNLBEmwhHUS61UxYyMn6R6eXi0kxG02qj
+rAXKbTiFCK0W0PDdAgMBAAE=
+-----END PUBLIC KEY-----
+```
 
 #### 3.2.2 Encryption (System A)
 
