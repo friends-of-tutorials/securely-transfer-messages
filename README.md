@@ -851,6 +851,42 @@ user@sh$ diff <(cat id_rsa.pub | grep -v "PUBLIC KEY" | tr -d '\n') <(openssl rs
 
 Returns "ok" if the private and public keys match. Returns "failed" if not.
 
+### 4.3 Sign and verify a message
+
+#### 4.3.1 Sign the message
+
+```console
+user@sh$ echo -en "Hello world! :)\n\nThis is my secret text." | openssl dgst -sha256 -sign private.pem | openssl base64
+```
+
+It returns
+
+```
+EDkjt+1Hwui8eCZeP24K3yO0IuTxVZlNUDaAF4WTWkjSx8jPAoASSANQBtLG25Ss
+l2RBgDryW9+HVeD80sevyiUP91VxRs1YmfMWEwoJp+cLR46Gbkrw1q5CfDYssH01
+XqnRdIF/053eFN2p0V7jshM+W59B5C4tG3oOh1rQRIFb0ekWEYpj3Y4oeRiDsT5Y
+AvGxcozLkkFHKEbwL02nCqksIDSO6EAWMt6uzygOxeEWwF5P7wm0aIAjF7xtoHKk
+VaVcacgwqrDSGGmFJuWDKY47ZRNdidh5eNEmwgzZVZWjJWLAFx42Jz94BSafNZwr
+dbofMCup1rPoFlz9m4N90Q==
+```
+
+You can now save this signature to signature.txt for example.
+
+#### 4.3.1 Verify the signature
+
+```console
+openssl base64 -d -in signature.txt -out  /tmp/sign.sha256
+echo -en "Hello world! :)\n\nThis is my secret text." | openssl dgst -sha256 -verify public.pem -signature /tmp/sign.sha256
+```
+
+```
+Verified OK
+```
+
+```
+Verification Failure
+```
+
 ## A. Authors
 
 * Björn Hempel <bjoern@hempel.li> - _Initial work_ - [https://github.com/bjoern-hempel](https://github.com/bjoern-hempel)
