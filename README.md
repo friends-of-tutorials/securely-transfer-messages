@@ -32,7 +32,7 @@ This is a tutorial to securely transfer messages from system A to system B with 
 * [4. Tools](#user-content-4-tools)
   * [4.1 Check the private key](#user-content-41-check-the-private-key)
   * [4.2 Check private and public key](#user-content-42-check-private-and-public-key)
-  
+  * [4.3 Sign and verify a message](#user-content-43-sign-and-verify-a-message)
   
 ## 1. Rules of information security
 
