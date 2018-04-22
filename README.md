@@ -196,6 +196,8 @@ Before the readable message is sent, it is encrypted with the symmetric key. Onl
 
 ## 3. Implementations
 
+The following implementations are fully compatible with each other. This allows you, for example, immediate encryption in the browser (Javascript) and the later decryption on the server (PHP or Bash).
+
 ### 3.1 Bash
 
 #### 3.1.1 Preparations (public and private key)
