@@ -751,6 +751,12 @@ eIi743OKU8Q3c/FOY7+v4+VinescMksrkaI37DH1CBTkCejQlts=
 -----END RSA PRIVATE KEY-----
 ```
 
+### 4.2 Check private and public key
+
+```console
+user@sh$ diff <(cat id_rsa.pub | grep -v "PUBLIC KEY" | tr -d '\n') <(openssl rsa -pubout -in id_rsa 2>/dev/null | grep -v "PUBLIC KEY" | tr -d '\n')
+```
+
 ## A. Authors
 
 * Björn Hempel <bjoern@hempel.li> - _Initial work_ - [https://github.com/bjoern-hempel](https://github.com/bjoern-hempel)
