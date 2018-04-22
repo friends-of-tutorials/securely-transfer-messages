@@ -573,11 +573,8 @@ console.log(decrypted);
 ```javascript
 var key = '71EB7C9E4F6E4B4A1341E4AD519FB22D0BD4A0AF0B8CB77FEA0C6E1F82870B0C';
 var iv  = '10A8C339AEC170CCBA8D3816785F67F6';
-var decrypted = '4FFWdfqQzuMd/JP3fvpriRC5oajS8ENpCD3ZOxDVBZmWAFPhIkb4iVbWYnWPDNCw';
-
-var key       = CryptoJS.enc.Hex.parse(key);
-var iv        = CryptoJS.enc.Hex.parse(iv);
-var decrypted = CryptoJS.AES.decrypt(decrypted, key, {iv: iv});
+var ciphertext = '4FFWdfqQzuMd/JP3fvpriRC5oajS8ENpCD3ZOxDVBZmWAFPhIkb4iVbWYnWPDNCw';
+var decrypted = CryptoJS.AES.decrypt(ciphertext, CryptoJS.enc.Hex.parse(key), {iv: CryptoJS.enc.Hex.parse(iv)});
 console.log(decrypted.toString(CryptoJS.enc.Utf8));
 ```
 
