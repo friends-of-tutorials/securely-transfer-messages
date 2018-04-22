@@ -30,6 +30,7 @@ This is a tutorial to securely transfer messages from system A to system B with 
     * [3.3.2 Encryption (System A)](#user-content-332-encryption-system-a)
     * [3.3.3 Decryption (System B)](#user-content-333-decryption-system-b)
 * [4. Tools](#user-content-4-tools)
+  * [4.1 Check the private key](#user-content-41-check-the-private-key)
   
   
 ## 1. Rules of information security
