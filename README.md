@@ -631,18 +631,18 @@ $config = array(
 /* Create the private and public key */
 $res = openssl_pkey_new($config);
 
-/* Extract the private key into $private_key */
-openssl_pkey_export($res, $private_key);
+/* Extract the private key into $privateKey */
+openssl_pkey_export($res, $privateKey);
 
-/* Extract the public key into $public_key */
-$public_key = openssl_pkey_get_details($res);
-$public_key = $public_key["key"];
+/* Extract the public key into $publicKey */
+$publicKey = openssl_pkey_get_details($res);
+$publicKey = $publicKey["key"];
 
 /* echo the public key */
-echo $public_key."\n";
+echo $publicKey."\n";
 
 /* echo the private key */
-echo $private_key."\n";
+echo $privateKey."\n";
 ```
 
 ```
