@@ -452,7 +452,7 @@ This is my secret text.
 
 ### 3.2 Javascript
 
-The symmetric and asymmetric encryptions are not natively supported by Javascript. In the following examples I will use this library for asymmetric encription: https://github.com/travist/jsencrypt. Fell free to use different ones.
+The symmetric and asymmetric encryptions are not natively supported by Javascript. In the following examples I will use this library for asymmetric encription: https://github.com/travist/jsencrypt. For the symmetric part I will use this library: https://code.google.com/archive/p/crypto-js/. Fell free to use different ones.
 
 #### 3.2.1 Preparations
 
