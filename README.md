@@ -853,9 +853,9 @@ Returns "ok" if the private and public keys match. Returns "failed" if not.
 
 ### 4.3 Sign and verify a message
 
-#### 4.3.1 Sign the message
+#### 4.3.1 Sign the message (System A)
 
-Create the signature from the given message and the private key "private.pem":
+Create the signature from the given message and the private key "private.pem". The private key in that case is from the message sender:
 
 ```console
 user@sh$ echo -en "Hello world! :)\n\nThis is my secret text." | openssl dgst -sha256 -sign private.pem | openssl base64
@@ -874,7 +874,7 @@ dbofMCup1rPoFlz9m4N90Q==
 
 You can now save this signature to signature.txt for example.
 
-#### 4.3.1 Verify the signature
+#### 4.3.1 Verify the signature (System B)
 
 Check if the message authenticates with the public key "public.pem" from the message sender:
 
