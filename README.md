@@ -569,6 +569,23 @@ a0lpMDZPK2loQ0NSRnZlUG11d01FVWwvdEJBL0k1RVJ6d2NsZUttN0srOGdUcHg0M1NaL2hpY1VpaU5t
 
 ##### 3.2.3.1 Extract the asymmetrical and the symmetrical part
 
+```javascript
+var decryptedSections = atob(ciphertext).split('\n\n');
+console.log(decryptedSections[0]);
+console.log(decryptedSections[1]);
+```
+
+The expected result is:
+
+```
+kIi06O+ihCCRFvePmuwMEUl/tBA/I5ERzwcleKm7K+8gTpx43SZ/hicUiiNmOnvGTAeZbKqK8mU1CuFcbpkmWh8JgfdCkQhoWJsu/HJJQwQ3zDrjl58PUDJrSBDXV3jATXN3phwsO7bgxvj6bAxsM5PZEajDf1gDYqGGPbkU7xyy5Mequ7ffYuTckpsWaNiFQ0hfbGEDytdjxvKGOqx8mOFCaDeKmklzJGo28ZQBWWHD1TYfBbOE4E6vl+3qBve7XDahdtQY1ZovLdzQ0xGoWzFtQo6LTjmTAUannyFsNamDWWEsdaexZSB9d4QKrHjGZieaz/EH0WCEAKJ4FkaipQ==
+```
+
+```
+4FFWdfqQzuMd/JP3fvpriRC5oajS8ENpCD3ZOxDVBZmWAFPhIkb4iVbWYnWPDNCw
+```
+
+
 ##### 3.2.3.2 Decrypt the key and iv (from asymmetrical part)
 
 ```javascript
