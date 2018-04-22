@@ -536,6 +536,8 @@ kIi06O+ihCCRFvePmuwMEUl/tBA/I5ERzwcleKm7K+8gTpx43SZ/hicUiiNmOnvGTAeZbKqK8mU1CuFc
 
 ##### 3.2.2.2 Encrypt the message
 
+
+
 ##### 3.2.2.3 Combine the RSA ciphertext and AES ciphertext
 
 #### 3.2.3 Decryption (System B)
@@ -555,6 +557,25 @@ console.log(decrypted);
 ```
 
 ##### 3.2.3.3 Decrypt the ciphertext (from symmetrical part)
+
+```javascript
+var key = '71EB7C9E4F6E4B4A1341E4AD519FB22D0BD4A0AF0B8CB77FEA0C6E1F82870B0C';
+var iv  = '10A8C339AEC170CCBA8D3816785F67F6';
+var decrypted = '4FFWdfqQzuMd/JP3fvpriRC5oajS8ENpCD3ZOxDVBZmWAFPhIkb4iVbWYnWPDNCw';
+
+var key       = CryptoJS.enc.Hex.parse(key);
+var iv        = CryptoJS.enc.Hex.parse(iv);
+var decrypted = CryptoJS.AES.decrypt(decrypted, key, {iv: iv});
+console.log(decrypted.toString(CryptoJS.enc.Utf8));
+```
+
+Now we get the unciphered and expected message:
+
+```
+Hello world! :)
+
+This is my secret text.
+```
 
 ### 3.3 PHP
 
