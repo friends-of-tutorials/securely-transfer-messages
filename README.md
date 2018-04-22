@@ -458,12 +458,14 @@ The symmetric and asymmetric encryptions are not natively supported by Javascrip
 
 ```javascript
 var crypt = new JSEncrypt({default_key_size: 2048});
+var privateKey = crypt.getPrivateKey();
+var publicKey  = crypt.getPublicKey();
 ```
 
 ##### 3.2.1.1 Private key
 
 ```javascript
-console.log(crypt.getPrivateKey());
+console.log(privateKey);
 ```
 
 ```
@@ -499,7 +501,7 @@ HQGNjvQKa0q5Q9MfnA23R3yiTi6q4K+tYZDQkczDW8rzfv96k7M=
 ##### 3.2.1.2 Public key
 
 ```javascript
-console.log(crypt.getPublicKey());
+console.log(publicKey);
 ```
 
 ```
@@ -516,7 +518,18 @@ AgMBAAE=
 
 #### 3.2.2 Encryption (System A)
 
-TODO...
+```javascript
+var key = '71EB7C9E4F6E4B4A1341E4AD519FB22D0BD4A0AF0B8CB77FEA0C6E1F82870B0C';
+var iv  = '10A8C339AEC170CCBA8D3816785F67F6';
+var encryptedKeyIv = crypt.encrypt(key + ':' + iv);
+console.log(encryptedKeyIv);
+```
+
+As an example, the output below which differs from yours:
+
+```javascript
+kIi06O+ihCCRFvePmuwMEUl/tBA/I5ERzwcleKm7K+8gTpx43SZ/hicUiiNmOnvGTAeZbKqK8mU1CuFcbpkmWh8JgfdCkQhoWJsu/HJJQwQ3zDrjl58PUDJrSBDXV3jATXN3phwsO7bgxvj6bAxsM5PZEajDf1gDYqGGPbkU7xyy5Mequ7ffYuTckpsWaNiFQ0hfbGEDytdjxvKGOqx8mOFCaDeKmklzJGo28ZQBWWHD1TYfBbOE4E6vl+3qBve7XDahdtQY1ZovLdzQ0xGoWzFtQo6LTjmTAUannyFsNamDWWEsdaexZSB9d4QKrHjGZieaz/EH0WCEAKJ4FkaipQ==
+```
 
 #### 3.2.3 Decryption (System B)
 
