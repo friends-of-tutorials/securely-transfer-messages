@@ -754,8 +754,10 @@ eIi743OKU8Q3c/FOY7+v4+VinescMksrkaI37DH1CBTkCejQlts=
 ### 4.2 Check private and public key
 
 ```console
-user@sh$ diff <(cat id_rsa.pub | grep -v "PUBLIC KEY" | tr -d '\n') <(openssl rsa -pubout -in id_rsa 2>/dev/null | grep -v "PUBLIC KEY" | tr -d '\n')
+user@sh$ diff <(cat id_rsa.pub | grep -v "PUBLIC KEY" | tr -d '\n') <(openssl rsa -pubout -in id_rsa 2>/dev/null | grep -v "PUBLIC KEY" | tr -d '\n') 1>/dev/null && echo 'ok' || echo 'failed'
 ```
+
+Returns "ok" if the private and public keys match. Returns "failed" if not.
 
 ## A. Authors
 
