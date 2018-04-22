@@ -526,8 +526,8 @@ AgMBAAE=
 ```javascript
 var key = '71EB7C9E4F6E4B4A1341E4AD519FB22D0BD4A0AF0B8CB77FEA0C6E1F82870B0C';
 var iv  = '10A8C339AEC170CCBA8D3816785F67F6';
-var encryptedKeyIv = crypt.encrypt(key + ':' + iv);
-console.log(encryptedKeyIv);
+var rsaCiphertext = crypt.encrypt(key + ':' + iv);
+console.log(rsaCiphertext);
 ```
 
 As an example, the output below which differs from yours:
@@ -543,7 +543,8 @@ var key = '71EB7C9E4F6E4B4A1341E4AD519FB22D0BD4A0AF0B8CB77FEA0C6E1F82870B0C';
 var iv  = '10A8C339AEC170CCBA8D3816785F67F6';
 var message = "Hello world! :)\n\nThis is my secret text.";
 var encrypted = CryptoJS.AES.encrypt(message, CryptoJS.enc.Hex.parse(key), {iv: CryptoJS.enc.Hex.parse(iv)});
-console.log(encrypted.ciphertext.toString(CryptoJS.enc.Base64));
+var aesCiphertext = encrypted.ciphertext.toString(CryptoJS.enc.Base64);
+console.log(aesCiphertext);
 ```
 
 The result:
@@ -555,19 +556,13 @@ The result:
 ##### 3.2.2.3 Combine the RSA ciphertext and AES ciphertext
 
 ```javascript
-var rsaCiphertext = `NdqZLQkmyq3BVgz5M1F/wWX/KNIBxkYWGau3JS6r7t88o08KbsT7N7paS7SsUnclWtLj2Dt4YLu5
-7sybKc1m8S/vXj4pJ4wQicgSv2+KvV0baebQ/jw559W8y52HPKj/KNEL/uf1NULijyn0fVuMzaWn
-bz0UTwN7NVfZcG5ohyXOLEiS6eEkGIHeqAV7VcJf51wxNMHg0aH1ENB/3Zs7zUY6lQJtUIIDZYiF
-/c9QMg49g8RytB8Bkg7Fqd5DmptbjXXbGAK3TAKOfdKv3H8TOtkItQGg9DILCRrBzX0PgdpmnRCE
-EftyO2lwVc88+ql2+GVFRkxxOlSdQ46FTeryag==`;
-var aesCiphertext = '4FFWdfqQzuMd/JP3fvpriRC5oajS8ENpCD3ZOxDVBZmWAFPhIkb4iVbWYnWPDNCw';
 var ciphertext = btoa(rsaCiphertext + '\n\n' + aesCiphertext);
 ```
 
 The following combined ciphertext is only decryptable with the private key (private.pem) and can be safely sent over any data network:
 
 ```
-TmRxWkxRa215cTNCVmd6NU0xRi93V1gvS05JQnhrWVdHYXUzSlM2cjd0ODhvMDhLYnNUN043cGFTN1NzVW5jbFd0TGoyRHQ0WUx1NQo3c3liS2MxbThTL3ZYajRwSjR3UWljZ1N2MitLdlYwYmFlYlEvanc1NTlXOHk1MkhQS2ovS05FTC91ZjFOVUxpanluMGZWdU16YVduCmJ6MFVUd043TlZmWmNHNW9oeVhPTEVpUzZlRWtHSUhlcUFWN1ZjSmY1MXd4Tk1IZzBhSDFFTkIvM1pzN3pVWTZsUUp0VUlJRFpZaUYKL2M5UU1nNDlnOFJ5dEI4QmtnN0ZxZDVEbXB0YmpYWGJHQUszVEFLT2ZkS3YzSDhUT3RrSXRRR2c5RElMQ1JyQnpYMFBnZHBtblJDRQpFZnR5TzJsd1ZjODgrcWwyK0dWRlJreHhPbFNkUTQ2RlRlcnlhZz09Cgo0RkZXZGZxUXp1TWQvSlAzZnZwcmlSQzVvYWpTOEVOcENEM1pPeERWQlptV0FGUGhJa2I0aVZiV1luV1BETkN3
+a0lpMDZPK2loQ0NSRnZlUG11d01FVWwvdEJBL0k1RVJ6d2NsZUttN0srOGdUcHg0M1NaL2hpY1VpaU5tT252R1RBZVpiS3FLOG1VMUN1RmNicGttV2g4SmdmZENrUWhvV0pzdS9ISkpRd1EzekRyamw1OFBVREpyU0JEWFYzakFUWE4zcGh3c083Ymd4dmo2YkF4c001UFpFYWpEZjFnRFlxR0dQYmtVN3h5eTVNZXF1N2ZmWXVUY2twc1dhTmlGUTBoZmJHRUR5dGRqeHZLR09xeDhtT0ZDYURlS21rbHpKR28yOFpRQldXSEQxVFlmQmJPRTRFNnZsKzNxQnZlN1hEYWhkdFFZMVpvdkxkelEweEdvV3pGdFFvNkxUam1UQVVhbm55RnNOYW1EV1dFc2RhZXhaU0I5ZDRRS3JIakdaaWVhei9FSDBXQ0VBS0o0RmthaXBRPT0KCjRGRldkZnFRenVNZC9KUDNmdnByaVJDNW9halM4RU5wQ0QzWk94RFZCWm1XQUZQaElrYjRpVmJXWW5XUEROQ3c=
 ```
 
 #### 3.2.3 Decryption (System B)
