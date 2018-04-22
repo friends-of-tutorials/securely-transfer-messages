@@ -536,7 +536,19 @@ kIi06O+ihCCRFvePmuwMEUl/tBA/I5ERzwcleKm7K+8gTpx43SZ/hicUiiNmOnvGTAeZbKqK8mU1CuFc
 
 ##### 3.2.2.2 Encrypt the message
 
+```javascript
+var key = '71EB7C9E4F6E4B4A1341E4AD519FB22D0BD4A0AF0B8CB77FEA0C6E1F82870B0C';
+var iv  = '10A8C339AEC170CCBA8D3816785F67F6';
+var message = "Hello world! :)\n\nThis is my secret text.";
+var encrypted = CryptoJS.AES.encrypt(message, CryptoJS.enc.Hex.parse(key), {iv: CryptoJS.enc.Hex.parse(iv)});
+console.log(encrypted.ciphertext.toString(CryptoJS.enc.Base64));
+```
 
+The result:
+
+```
+4FFWdfqQzuMd/JP3fvpriRC5oajS8ENpCD3ZOxDVBZmWAFPhIkb4iVbWYnWPDNCw
+```
 
 ##### 3.2.2.3 Combine the RSA ciphertext and AES ciphertext
 
