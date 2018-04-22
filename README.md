@@ -163,7 +163,7 @@ Before the readable message is sent, it is encrypted with the symmetric key. Onl
 
 [![No cryptography](/images/hybrid_cryptography_2.png)](/images/hybrid_cryptography_2.png)
 
-**Please note:** Although this variant is easier to implement than version 1, it should be considered that this type of transmission does not regard to the rules of authenticity. It is possible that this message could be intercepted and filled with own content by the attacker. In order to keep the authenticity, I recommend to additionally sign the sent message.
+**Please note:** Although this variant is easier to implement than version 1, it should be considered that this type of transmission does not regard to the rules of authenticity. It is possible that this message could be intercepted and filled with own content by attackers. In order to keep the authenticity, I recommend to additionally sign the sent message.
 
 ##### 2.2.3.2 Advantages
 
