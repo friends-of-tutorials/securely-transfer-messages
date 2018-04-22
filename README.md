@@ -590,8 +590,8 @@ XIOG1gExmNaYLEMy4X+r2hpobNz0rZRJfQpGgksjlbtgFEH2QYA7sAWAnTgGi5cZDY8GUmGkRYIP4Mhe
 
 ```javascript
 crypt.setPrivateKey(privateKey);
-var decrypted = crypt.decrypt(decryptedSections[0]);
-console.log(decrypted);
+var keyIv = crypt.decrypt(decryptedSections[0]);
+console.log(keyIv);
 ```
 
 ```
@@ -601,10 +601,8 @@ console.log(decrypted);
 ##### 3.2.3.3 Decrypt the ciphertext (from symmetrical part)
 
 ```javascript
-var key = '71EB7C9E4F6E4B4A1341E4AD519FB22D0BD4A0AF0B8CB77FEA0C6E1F82870B0C';
-var iv  = '10A8C339AEC170CCBA8D3816785F67F6';
-var ciphertext = '4FFWdfqQzuMd/JP3fvpriRC5oajS8ENpCD3ZOxDVBZmWAFPhIkb4iVbWYnWPDNCw';
-var decrypted = CryptoJS.AES.decrypt(ciphertext, CryptoJS.enc.Hex.parse(key), {iv: CryptoJS.enc.Hex.parse(iv)});
+var splittedKeyIv = crypt.decrypt(decryptedSections[0]).split(':');
+var decrypted = CryptoJS.AES.decrypt(decryptedSections[1], CryptoJS.enc.Hex.parse(splittedKeyIv[0]), {iv: CryptoJS.enc.Hex.parse(splittedKeyIv[1])});
 console.log(decrypted.toString(CryptoJS.enc.Utf8));
 ```
 
