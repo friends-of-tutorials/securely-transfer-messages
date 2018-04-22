@@ -518,6 +518,8 @@ AgMBAAE=
 
 #### 3.2.2 Encryption (System A)
 
+##### 3.2.2.1 Encrypt the iv and key
+
 ```javascript
 var key = '71EB7C9E4F6E4B4A1341E4AD519FB22D0BD4A0AF0B8CB77FEA0C6E1F82870B0C';
 var iv  = '10A8C339AEC170CCBA8D3816785F67F6';
@@ -527,13 +529,31 @@ console.log(encryptedKeyIv);
 
 As an example, the output below which differs from yours:
 
-```javascript
+```
 kIi06O+ihCCRFvePmuwMEUl/tBA/I5ERzwcleKm7K+8gTpx43SZ/hicUiiNmOnvGTAeZbKqK8mU1CuFcbpkmWh8JgfdCkQhoWJsu/HJJQwQ3zDrjl58PUDJrSBDXV3jATXN3phwsO7bgxvj6bAxsM5PZEajDf1gDYqGGPbkU7xyy5Mequ7ffYuTckpsWaNiFQ0hfbGEDytdjxvKGOqx8mOFCaDeKmklzJGo28ZQBWWHD1TYfBbOE4E6vl+3qBve7XDahdtQY1ZovLdzQ0xGoWzFtQo6LTjmTAUannyFsNamDWWEsdaexZSB9d4QKrHjGZieaz/EH0WCEAKJ4FkaipQ==
 ```
 
+##### 3.2.2.2 Encrypt the message
+
+##### 3.2.2.3 Combine the RSA ciphertext and AES ciphertext
+
 #### 3.2.3 Decryption (System B)
 
-TODO...
+##### 3.2.3.1 Extract the asymmetrical and the symmetrical part
+
+##### 3.2.3.2 Decrypt the key and iv (from asymmetrical part)
+
+```javascript
+crypt.setPrivateKey(privateKey);
+var decrypted = crypt.decrypt(encryptedKeyIv);
+console.log(decrypted);
+```
+
+```
+71EB7C9E4F6E4B4A1341E4AD519FB22D0BD4A0AF0B8CB77FEA0C6E1F82870B0C:10A8C339AEC170CCBA8D3816785F67F6
+```
+
+##### 3.2.3.3 Decrypt the ciphertext (from symmetrical part)
 
 ### 3.3 PHP
 
