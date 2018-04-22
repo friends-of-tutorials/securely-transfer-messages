@@ -875,13 +875,17 @@ You can now save this signature to signature.txt for example.
 #### 4.3.1 Verify the signature
 
 ```console
-openssl base64 -d -in signature.txt -out  /tmp/sign.sha256
-echo -en "Hello world! :)\n\nThis is my secret text." | openssl dgst -sha256 -verify public.pem -signature /tmp/sign.sha256
+user@sh$ openssl base64 -d -in signature.txt -out  /tmp/sign.sha256
+user@sh$ echo -en "Hello world! :)\n\nThis is my secret text." | openssl dgst -sha256 -verify public.pem -signature /tmp/sign.sha256
 ```
+
+If the verification succeeds you will see:
 
 ```
 Verified OK
 ```
+
+Otherwise:
 
 ```
 Verification Failure
