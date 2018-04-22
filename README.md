@@ -855,6 +855,8 @@ Returns "ok" if the private and public keys match. Returns "failed" if not.
 
 #### 4.3.1 Sign the message
 
+Create the signature from the given message:
+
 ```console
 user@sh$ echo -en "Hello world! :)\n\nThis is my secret text." | openssl dgst -sha256 -sign private.pem | openssl base64
 ```
@@ -876,6 +878,11 @@ You can now save this signature to signature.txt for example.
 
 ```console
 user@sh$ openssl base64 -d -in signature.txt -out  /tmp/sign.sha256
+```
+
+Check if the message authenticates:
+
+```console
 user@sh$ echo -en "Hello world! :)\n\nThis is my secret text." | openssl dgst -sha256 -verify public.pem -signature /tmp/sign.sha256
 ```
 
